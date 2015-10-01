@@ -18,3 +18,11 @@ Landing page for www.teknologforeningen.fi
 -Press "Start" on Apache-row  
 -In case Xampp fails to run Apache, make sure Xampp isn't being stopped by your antivirus program and try rebooting your computer  
 -If it starts successfully open your browser and type localhost/www.teknologforeningen.fi in the addressbar to check if it's up and running  
+
+**Instruktioner: XAMPP på Arch Linux**
+1. Ladda ner nyaste XAMPP från https://www.apachefriends.org/
+2. Kör vid behov chmod 755 xampp-linux-*-installer.run
+3. sudo ./xampp-linux-*-installer.run
+4. Lägg till din github-mapp till /opt/lampp/etc/httpd.conf, följ instruktioner på https://wiki.archlinux.org/index.php/Xampp
+5. chmod o+x /väg/till/din/mapp/
+6. Fungerar kanske? Om inte så hjälper StackExchange.
