@@ -6,13 +6,13 @@ Landing page for www.teknologforeningen.fi
 ### Otto on any platform
 
 1. Install [otto](https://ottoproject.io/) and [VirtualBox](https://www.virtualbox.org/)
-2. Clone this repository ´git clone https://github.com/Teknologforeningen/www.teknologforeningen.fi.git´
-3. In the project folder, run ´otto compile´
+2. Clone this repository `git clone https://github.com/Teknologforeningen/www.teknologforeningen.fi.git`
+3. In the project folder, run `otto compile`
 4. Allow otto to install all of its dependencies
 5. Run ´otto dev´ this will start a virtual machine
 6. Make a note of the IP that the virtual machine is running on.
 7. Log in to the virtual machine with `otto ssh`
-8. Run the PHP server with: ´php -S 0.0.0.0:5000´
+8. Run the PHP server with: `php -S 0.0.0.0:5000`
 9. The server is now running on port 5000 on the IP printed out in step 5
 
 ### MAMP on Mac OS X
