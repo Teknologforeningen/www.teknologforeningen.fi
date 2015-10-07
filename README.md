@@ -8,8 +8,8 @@ Landing page for www.teknologforeningen.fi
 1. Install [otto](https://ottoproject.io/) and [VirtualBox](https://www.virtualbox.org/)
 2. Clone this repository `git clone https://github.com/Teknologforeningen/www.teknologforeningen.fi.git`
 3. In the project folder, run `otto compile`
-4. Allow otto to install all of its dependencies
-5. Run ´otto dev´ this will start a virtual machine
+4. Run ´otto dev´ this will start a virtual machine
+5. Allow otto to install all of its dependencies
 6. Make a note of the IP that the virtual machine is running on.
 7. Log in to the virtual machine with `otto dev ssh` 
 	7b. Windows: Use Putty (or similar) to connect.
