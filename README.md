@@ -1,11 +1,21 @@
-
-
 # www.teknologforeningen.fi
 Landing page for www.teknologforeningen.fi
 
 ## Development setup
 
-### Instructions: PHP Server for Mac**
+### Otto on any platform
+
+1. Install [otto](https://ottoproject.io/) and [VirtualBox](https://www.virtualbox.org/)
+2. Clone this repository ´git clone https://github.com/Teknologforeningen/www.teknologforeningen.fi.git´
+3. In the project folder, run ´otto compile´
+4. Allow otto to install all of its dependencies
+5. Run ´otto dev´ this will start a virtual machine
+6. Make a note of the IP that the virtual machine is running on.
+7. Log in to the virtual machine with `otto ssh`
+8. Run the PHP server with: ´php -S 0.0.0.0:5000´
+9. The server is now running on port 5000 on the IP printed out in step 5
+
+### MAMP on Mac OS X
 
 1. Download MAMP https://www.mamp.info/en/downloads/
 2. Install the .pkg file you downloaded (next, next, continue, etc.)
@@ -15,7 +25,7 @@ Landing page for www.teknologforeningen.fi
 6. Done. Start the server from MAMP by clicking 'Start Servers'. :)
 
 
-### Instructions for Windows
+### XAMPP on Windows
 
 1. Start by downloading and installing [XAMPP](https://www.apachefriends.org/index.html)
 2. Open XAMPP Control Panel
@@ -24,7 +34,7 @@ Landing page for www.teknologforeningen.fi
 5. In case Xampp fails to run Apache, make sure Xampp isn't being stopped by your antivirus program and try rebooting your computer
 6. If it starts successfully open your browser and type localhost/www.teknologforeningen.fi in the addressbar to check if it's up and running
 
-### Instruktioner: XAMPP på Arch Linux
+### XAMPP on Arch Linux
 
 1. Ladda ner nyaste XAMPP från https://www.apachefriends.org/
 2. Kör vid behov chmod 755 xampp-linux-*-installer.run
