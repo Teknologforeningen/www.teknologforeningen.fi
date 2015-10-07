@@ -2,9 +2,9 @@
     ini_set('display_errors', true);
     error_reporting(E_ALL);
     
-    include_once './taffaAPI.class.php';
+    include_once './TaffaAPI.class.php';
     
-    $taffaAPI = new taffaAPI(@$_GET['lang']);
+    $taffaAPI = new TaffaAPI(@$_GET['lang']);
 ?>
 <!DOCTYPE html>
 <html>
