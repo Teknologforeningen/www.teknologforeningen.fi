@@ -1,3 +1,11 @@
+<?php
+    ini_set('display_errors', true);
+    error_reporting(E_ALL);
+    
+    include_once './taffaAPI.class.php';
+    
+    $taffaAPI = new taffaAPI(@$_GET['lang']);
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -8,7 +16,6 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-  <h1>Hej TF</h1>
-
+      <h1>Hej TF</h1>
   </body>
 </html>
