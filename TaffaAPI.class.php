@@ -1,4 +1,21 @@
 <?php
+// Business hours
+// Mon-Thu
+define('TAFAPI_MON_THU_OPEN_H', 10);
+define('TAFAPI_MON_THU_OPEN_MIN', 30);
+define('TAFAPI_MON_THU_CLOSE_H', 16);
+define('TAFAPI_MON_THU_CLOSE_MIN', 0);
+// Fri
+define('TAFAPI_FRI_OPEN_H', 10);
+define('TAFAPI_FRI_OPEN_MIN', 30);
+define('TAFAPI_FRI_CLOSE_H', 15);
+define('TAFAPI_FRI_CLOSE_MIN', 0);
+// Sat-Sun
+define('TAFAPI_SAT_SUN_OPEN_H', 0);
+define('TAFAPI_SAT_SUN_OPEN_MIN', 0);
+define('TAFAPI_SAT_SUN_CLOSE_H', 0);
+define('TAFAPI_SAT_SUN_CLOSE_MIN', 0);
+
 /**
  * taffaAPI is a class for easy access to the 
  * taffa API located at http://api.teknolog.fi/taffa/
@@ -45,7 +62,7 @@ class taffaAPI
      */
     public function getToday()
     {
-        return $this->get('html/0/');
+        return $this->get('html/0');
     }
     
     /**
@@ -72,15 +89,31 @@ class taffaAPI
                 'en' => 'The restaurant is not serving food at the moment!'
             );
         if (
-                ((int)date('G') < 10 || (int)date('G') === 10 && (int)date('i') < 30) // Pre 1030
-                || (int)date('G') >= 16 && (int)date('N') < 5 // Post 16 on mon-thu
-                || (int)date('G') >= 15 && (int)date('N') == 5 // Post 15 on fri
+                ((int)date('G') < TAFAPI_MON_THU_OPEN_H || (int)date('G') === TAFAPI_MON_THU_OPEN_H && (int)date('i') < TAFAPI_MON-THU_OPEN_MIN) // Pre 1030
+                || (int)date('G') >= TAFAPI_MON_THU_CLOSE_H && (int)date('N') < 5 // Post 16 on mon-thu
+                || (int)date('G') >= TAFAPI_FRI_CLOSE_H && (int)date('N') == 5 // Post 15 on fri
                 || (int)date('N') >  5 // sat-sun
             )
         {
             return $i18n[$this->curLang];
         }
         return $this->getToday();
+    }
+    
+    /**
+     * Get the menu for the NEXT AVAILABLE serving, including today
+     * @return string a HTML string of todays food, or tomorrows, depending
+     * on if the restaurant has closed today.
+     */
+    public function getNextMenu()
+    {
+        if(
+            (int)date('G') >= TAFAPI_MON_THU_CLOSE_H && (int)date('N') < 5 // Post 16 on mon-thu
+            || (int)date('G') >= TAFAPI_FRI_CLOSE_H && (int)date('N') == 5 // Post 15 on fri
+        )
+            return $this->getTomorrow();
+        else
+            return $this->getToday ();
     }
     
     /**
