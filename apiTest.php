@@ -28,7 +28,8 @@
               <li>
                   Yesterday
                   <?php
-                    echo $TaffaAPI->getYesterday();
+                    #echo $TaffaAPI->getYesterday();
+                    echo 'Unimplemented.';
                   ?>
               </li>
               <li>
