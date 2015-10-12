@@ -45,3 +45,8 @@ Landing page for www.teknologforeningen.fi
 4. Lägg till din github-mapp till /opt/lampp/etc/httpd.conf, följ instruktioner på https://wiki.archlinux.org/index.php/Xampp
 5. chmod o+x /väg/till/din/mapp/
 6. Fungerar kanske? Om inte så hjälper StackExchange.
+
+### TÄFFÄ API
+
+TäffäAPI or as it is referred to in code, TaffaAPI is a class for easy
+access to the taffa API located at http://api.teknolog.fi/taffa/
