@@ -51,11 +51,13 @@ class taffaAPI
     /**
      * Gets yesterdays food.
      * @return string a HTML string of yesterdays food
+     * @todo Implement.
      */
-    public function getYesterday()
+    /*public function getYesterday()
     {
-        return $this->get('html/' . ((date('N')-1)>1?date('N'):7) . '/');
-    }
+        // Not sure if the API supports it, if not, have to make it get by date
+        return $this->get('html/-1');
+    }*/
     
     /**
      * Gets the food that is served CURRENTLY at TF.
@@ -73,7 +75,7 @@ class taffaAPI
                 ((int)date('G') < 10 || (int)date('G') === 10 && (int)date('i') < 30) // Pre 1030
                 || (int)date('G') >= 16 && (int)date('N') < 5 // Post 16 on mon-thu
                 || (int)date('G') >= 15 && (int)date('N') == 5 // Post 15 on fri
-                ||  (int)date('N') > 5 // sat-sun
+                || (int)date('N') >  5 // sat-sun
             )
         {
             return $i18n[$this->curLang];
@@ -95,10 +97,25 @@ class taffaAPI
      * sunday.
      * @return string a HTML string of day n:s food
      */
-    public function getDayN($n = null)
+    public function getDayN($reqN = null)
     {
-        if(is_null($n))
-            $n = date('N');
+        if(is_null($reqN))
+            $reqN = date('N');
+        /*
+         * If we request a day N which is less than the current N (mon = 1,
+         * tue = 2, wed = 3 ... sun = 7), we will request next weeks' meals
+         */
+        $n = $reqN;
+        if($reqN < date('N'))
+        {
+            $diff = 7 - $reqN;
+            $n = $diff + 7;
+        }
+        else
+        {
+            $diff = $reqN - date('N');
+            $n = $diff;
+        }
         return $this->get('html/'.$n);
     }
     
