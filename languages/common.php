@@ -1,5 +1,5 @@
 <?php
-session.start();
+session_start();
 
 if (isSet($_GET['lang']))  {
 	$lang = $GET['lang'];
