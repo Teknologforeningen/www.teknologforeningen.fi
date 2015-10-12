@@ -39,6 +39,12 @@
                   ?>
               </li>
               <li>
+                  Next Serving
+                  <?php
+                    echo $TaffaAPI->getNextMenu();
+                  ?>
+              </li>
+              <li>
                   Måndag
                   <?php
                     echo $TaffaAPI->getDayN(1);
