@@ -2,7 +2,6 @@
 include_once './TaffaAPI.class.php';
 $TaffaAPI = new TaffaAPI(@$_GET['lang']);
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,7 +46,7 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
   </div>
   <div class="row">
     <div class="small-12 small-centered column">
-      
+      <?php echo $TaffaAPI->getNextMenu();?>
     </div>
   </div>
   <ul>
