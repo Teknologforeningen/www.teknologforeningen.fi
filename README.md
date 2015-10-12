@@ -45,5 +45,5 @@ Landing page for www.teknologforeningen.fi
 
 ### TÄFFÄ API
 
-TäffäAPI or as it is referred to in code, taffaAPI is a is a class for easy
+TäffäAPI or as it is referred to in code, TaffaAPI is a class for easy
 access to the taffa API located at http://api.teknolog.fi/taffa/
