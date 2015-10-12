@@ -1,11 +1,11 @@
 <?php
 session_start();
 
-if (isSet($_GET['lang']))  {
+if (isset($_GET['lang']))  {
 	$lang = $GET['lang'];
 	$_SESSION['lang'] = $lang;
 }
-else if(isSet($_SESSION['lang'])) {
+else if(isset($_SESSION['lang'])) {
 	$lang = $_SESSION['lang'];
 }
 else {
