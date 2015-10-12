@@ -1,0 +1,34 @@
+<?php
+session_start();
+
+if (isset($_GET['lang']))  {
+	$lang = $GET['lang'];
+	$_SESSION['lang'] = $lang;
+}
+else if(isset($_SESSION['lang'])) {
+	$lang = $_SESSION['lang'];
+}
+else {
+	$lang = 'sv';
+}
+
+switch ($lang) {
+  case 'sv':
+  $lang_file = 'lang.sv.php';
+  break;
+ 
+  case 'fi':
+  $lang_file = 'lang.fi.php';
+  break;
+ 
+  case 'en':
+  $lang_file = 'lang.en.php';
+  break;
+ 
+  default:
+  $lang_file = 'lang.sv.php';
+ 
+}
+ 
+include_once 'languages/'.$lang_file;
+?>
