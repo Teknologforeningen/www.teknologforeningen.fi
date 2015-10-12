@@ -40,19 +40,15 @@
     </div>
   </div>
   <div class="row">
-    <div class="small-12 column">
-      <h3>Meny</h3>
-      <h6>Tisdag 5.5.2015</h6>
+    <div class="small-12 small-centered column">
+      <h3>Meny <small>Tisdag 5.5.2015</small></h3>
       <p>Kalkon gordon bleu, gräddfilssås med vitlök S A
         Morotspurésoppa L G T S A
         Tonfisksallad VL G T S A
         Grönsaksomelett L G T A
-        A la Carte: Grillkorvar i korg VL G A
-        Kom ihåg rabatten på à la carte med Elisa
-        Lompakko närbetalning</p>
+        A la Carte: Grillkorvar i korg VL G A</p>
         <p>
-          Öppethållningstider:
-          Måndag - Torsdag: 10:30 - 16:00
+          Måndag - Torsdag: 10:30 - 16:00<br>
           Fredag: 10:30 - 15:00
         </p>
       </div>
