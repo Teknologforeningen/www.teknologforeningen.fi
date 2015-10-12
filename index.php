@@ -1,6 +1,12 @@
+<?php
+include_once './TaffaAPI.class.php';
+$TaffaAPI = new TaffaAPI(@$_GET['lang']);
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- TEKNOLOGRÖD: #b20738 -->
   <title>Hej TF</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -41,34 +47,25 @@
   </div>
   <div class="row">
     <div class="small-12 small-centered column">
-      <h3>Meny <small>Tisdag 5.5.2015</small></h3>
-      <p>Kalkon gordon bleu, gräddfilssås med vitlök S A
-        Morotspurésoppa L G T S A
-        Tonfisksallad VL G T S A
-        Grönsaksomelett L G T A
-        A la Carte: Grillkorvar i korg VL G A</p>
-        <p>
-          Måndag - Torsdag: 10:30 - 16:00<br>
-          Fredag: 10:30 - 15:00
-        </p>
-      </div>
+      
     </div>
+  </div>
+  <ul>
+    <li><a href="#"><img src="assets/tf_natside_logon-05.svg" style="height: 64px"><span><h3>Täffä</h3><p>Teknologrestaurang</p></span></a> </li>
+    <li><a href="#"><img src="assets/tf_natside_logon-06.svg" style="height: 64px"><span><h3>Täffä AB</h3><p>Beställningsrestaurang</p></span></a></li>
+    <li><a href="#"><img src="assets/tf_natside_logon-07.svg" style="height: 64px"><span><h3>Träffpunkt Aalto</h3></span></a></li>
+  </ul>
+  <footer>
     <ul>
-      <li><a href="#"><img src="assets/tf_natside_logon-05.svg" style="height: 64px"><span><h3>Täffä</h3><p>Teknologrestaurang</p></span></a> </li>
-      <li><a href="#"><img src="assets/tf_natside_logon-06.svg" style="height: 64px"><span><h3>Täffä AB</h3><p>Beställningsrestaurang</p></span></a></li>
-      <li><a href="#"><img src="assets/tf_natside_logon-07.svg" style="height: 64px"><span><h3>Träffpunkt Aalto</h3></span></a></li>
+      <li><a href="#">Suomeksi</a></li>
+      <li><a href="#">In English</a></li>
     </ul>
-    <footer>
-      <ul>
-        <li><a href="#">Suomeksi</a></li>
-        <li><a href="#">In English</a></li>
-      </ul>
-    </footer>
+  </footer>
 
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script>
-    $(document).foundation();
-    </script>
-  </body>
-  </html>
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/foundation.min.js"></script>
+  <script>
+  $(document).foundation();
+  </script>
+</body>
+</html>

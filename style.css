@@ -21,7 +21,6 @@
 }
 
 body {
-  background-color: red;
   font: 36px "Montserrat-Light";
 }
 
@@ -36,4 +35,8 @@ footer ul {
 
 footer ul li {
   display: inline;
+}
+
+.top-bar-section ul li > a {
+  font-family: "Montserrat-Light"
 }
