@@ -23,11 +23,11 @@
 }
 
 body {
-  font: 36px "Montserrat-Light";
+  font: 36px "Montserrat-Light", sans-serif;
 }
 
 h1 {
-  font-family: "Montserrat-Bold";
+  font-family: "Montserrat-Bold", sans-serif;
   font-size: 100px;
 }
 
@@ -44,5 +44,5 @@ footer ul li {
 }
 
 .top-bar-section ul li > a {
-  font-family: "Montserrat-Light"
+  font-family: "Montserrat-Light", sans-serif;
 }
