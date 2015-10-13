@@ -5,7 +5,6 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- TEKNOLOGRÖD: #b20738 -->
   <title>Hej TF</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
