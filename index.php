@@ -37,7 +37,7 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
   </nav>
   <div class="row">
     <div class="small-6 small-centered column">
-      <img src="assets/tf_natside_logon-08.svg" alt="Teknologföreningens logga" style="max-height: 270px">
+      <img src="assets/tf_natside_logon-08.svg" style="tf-logo" alt="Teknologföreningens logga">
     </div>
   </div>
   <div class="row">

@@ -31,6 +31,10 @@ h1 {
   font-size: 100px;
 }
 
+img.tf-logo {
+  max-height: 270px;
+}
+
 footer ul {
   text-align: center;
 }
