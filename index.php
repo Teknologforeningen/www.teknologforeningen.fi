@@ -12,7 +12,6 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/normalize.css">
 
-  <link href='https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
