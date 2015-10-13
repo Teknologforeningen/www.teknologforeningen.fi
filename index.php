@@ -15,8 +15,6 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
   <link href='https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="style.css">
 
-  <script src="js/vendor/modernizr.js"></script>
-
 </head>
 <body>
   <nav class="top-bar" data-topbar role="navigation">
