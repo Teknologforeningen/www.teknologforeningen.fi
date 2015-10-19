@@ -1,6 +1,7 @@
 <?php
     ini_set('display_errors', true);
     error_reporting(E_ALL);
+    date_default_timezone_set('Europe/Helsinki');
     
     include_once './TaffaAPI.class.php';
     
