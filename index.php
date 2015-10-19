@@ -5,7 +5,6 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- TEKNOLOGRÖD: #b20738 -->
   <title>Hej TF</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,10 +12,7 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/normalize.css">
 
-  <link href='https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="style.css">
-
-  <script src="js/vendor/modernizr.js"></script>
 
 </head>
 <body>
@@ -41,7 +37,7 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
   </nav>
   <div class="row">
     <div class="small-6 small-centered column">
-      <img src="assets/tf_natside_logon-08.svg" alt="Teknologföreningens logga" style="max-height: 270px">
+      <img src="assets/tf_natside_logon-08.svg" style="tf-logo" alt="Teknologföreningens logga">
     </div>
   </div>
   <div class="row">

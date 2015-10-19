@@ -1,3 +1,5 @@
+/* "Teknologröd" (the color of Teknologföreningen): #b20738 */
+
 @font-face {
   font-family: 'Montserrat-Bold';
   src: url('fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
@@ -38,6 +40,14 @@ body {
 
 .external-links h3 {
   margin: 0;
+}
+
+h1 {
+  font-family: "Montserrat-Bold", sans-serif;
+}
+
+img.tf-logo {
+  max-height: 270px;
 }
 
 footer ul {
