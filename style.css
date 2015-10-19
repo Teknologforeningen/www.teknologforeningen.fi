@@ -21,12 +21,23 @@
 }
 
 body {
-  font: 36px "Montserrat-Light";
+  font: "Montserrat-Light", sans-serif;
 }
 
-h1 {
-  font-family: "Montserrat-Bold";
-  font-size: 100px;
+.remove-padding {
+  padding: 0;
+}
+
+.external-links .columns {
+  padding-right: 0;
+}
+
+.external-links .columns {
+  margin-bottom: 10px;
+}
+
+.external-links h3 {
+  margin: 0;
 }
 
 footer ul {
@@ -37,6 +48,11 @@ footer ul li {
   display: inline;
 }
 
+h1 {
+  font-family: "Montserrat-Bold",sans-serif;
+  font-size: 100px;
+}
+
 .top-bar-section ul li > a {
-  font-family: "Montserrat-Light"
+  font-family: "Montserrat-Light", sans-serif;
 }

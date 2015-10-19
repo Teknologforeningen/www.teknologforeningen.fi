@@ -49,12 +49,50 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
       <?php echo $TaffaAPI->getNextMenu();?>
     </div>
   </div>
-  <ul>
-    <li><a href="#"><img src="assets/tf_natside_logon-05.svg" style="height: 64px"><span><h3>Täffä</h3><p>Teknologrestaurang</p></span></a> </li>
-    <li><a href="#"><img src="assets/tf_natside_logon-06.svg" style="height: 64px"><span><h3>Täffä AB</h3><p>Beställningsrestaurang</p></span></a></li>
-    <li><a href="#"><img src="assets/tf_natside_logon-07.svg" style="height: 64px"><span><h3>Träffpunkt Aalto</h3></span></a></li>
-  </ul>
-  <footer>
+  <div class="row external-links">
+    <div class="small-12 medium-4 columns">
+      <a href="#">
+        <div class="row">
+          <div class="small-4 columns">
+            <img src="assets/tf_natside_logon-05.svg" style="height: 64px">
+          </div>
+          <div class="small-8 columns">
+            <h3>Täffä</h3>
+            <span>Lunchrestaurang</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="small-12 medium-4 columns">
+      <a href="#">
+        <div class="row">
+          <div class="small-4 columns">
+            <img src="assets/tf_natside_logon-06.svg" style="height: 64px">
+          </div>
+          <div class="small-8 columns">
+            <h3>Täffä AB</h3>
+            <span>Beställningsrestaurang</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="small-12 medium-4 columns">
+      <a href="#">
+        <div class="row">
+          <div class="small-4 columns">
+            <img src="assets/tf_natside_logon-07.svg" style="height: 64px">
+          </div>
+          <div class="small-8 columns">
+            <h3>Träffpunkt Aalto</h3>
+            <span>Fin text hit kom</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="row full-width">
+    </div>
     <ul>
       <li><a href="#">Suomeksi</a></li>
       <li><a href="#">In English</a></li>
