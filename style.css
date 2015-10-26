@@ -23,7 +23,7 @@
 }
 
 a, a:hover {
-  color: #222;
+  color: #fff;
 }
 
 body {
@@ -92,6 +92,22 @@ h1 {
   font-size: 100px;
 }
 
+.todays-menu {
+  background-color: white;
+  padding: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #222;
+}
+
+.todays-menu li {
+  list-style: none;
+}
+
+.todays-menu p {
+  margin-bottom: 5px;
+}
+
 /* Mobile version specific properties of the top bar */
 @media screen and (max-width: 40em) {
 
@@ -99,8 +115,13 @@ h1 {
     padding: 0;
   }
 
-  /* Colors the hamburger menu */
-  .top-bar .toggle-topbar.menu-icon a span::after, .top-bar.expanded .toggle-topbar a span::after {
+  /* Colors the hamburger menu when unexpanded */
+  .top-bar .toggle-topbar.menu-icon a span::after {
+    box-shadow: 0 0 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff
+  }
+
+  /* Colors the hamburger menu when expanded */
+  .top-bar.expanded .toggle-topbar a span::after {
     box-shadow: 0 0 0 1px #222, 0 7px 0 1px #222, 0 14px 0 1px #222
   }
 
