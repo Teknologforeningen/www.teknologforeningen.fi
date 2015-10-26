@@ -84,6 +84,7 @@ footer ul {
 }
 
 footer ul li {
+  padding: 5px;
   display: inline;
 }
 
