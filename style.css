@@ -104,8 +104,10 @@ h1 {
   border-color: #222;
 }
 
-.todays-menu li {
+.todays-menu ul {
   list-style: none;
+  margin-left: 0;
+  margin-bottom: 0;
 }
 
 .todays-menu p {
