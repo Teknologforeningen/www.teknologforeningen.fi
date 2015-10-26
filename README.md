@@ -5,18 +5,21 @@ Landing page for www.teknologforeningen.fi
 
 ### Otto on any platform
 
-1. Install [otto](https://ottoproject.io/) and [VirtualBox](https://www.virtualbox.org/)
+1. Install [otto](https://ottoproject.io/), [VirtualBox](https://www.virtualbox.org/) and [vagrant](https://www.vagrantup.com/)
 2. Clone this repository `git clone https://github.com/Teknologforeningen/www.teknologforeningen.fi.git`
-3. In the project folder, run `otto compile`
-4. Run ´otto dev´ this will start a virtual machine
-5. Allow otto to install all of its dependencies
-6. Make a note of the IP that the virtual machine is running on.
-7. Log in to the virtual machine with `otto dev ssh` 
-	7b. Windows: Use Putty (or similar) to connect.
-	7c. Write the IP in the Host Name field. Press enter.
-	7d. Login: "vagrant" PW: "vagrant"
-8. Run the PHP server with: `php -S 0.0.0.0:5000`
-9. The server is now running on port 5000 on the IP printed out in step 5
+3. If on linux, make sure kernel modules are loaded: `sudo modprobe vboxdrv vboxnetadp vboxnetflt`
+4. In the project folder, run `otto compile`
+5. Run `otto dev` this will start a virtual machine
+6. Allow otto to install all of its dependencies
+7. Make a note of the IP that the virtual machine is running on.
+8. Log in to the virtual machine with `otto dev ssh` 
+	8b. Windows: Use Putty (or similar) to connect.
+	8c. Write the IP in the Host Name field. Press enter.
+	8d. Login: "vagrant" PW: "vagrant"
+9. Run the PHP server with: `php -S 0.0.0.0:5000`
+10. The server is now running on port 5000 on the IP printed out in step 5
+
+Alternatively, install XAMPP/MAMP locally:
 
 ### MAMP on Mac OS X
 
