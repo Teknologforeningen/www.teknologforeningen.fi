@@ -31,6 +31,8 @@ body {
   min-height: 100vh;
   flex-direction: column;
   font-family: "Montserrat-Light", sans-serif;
+  background: url("assets/tf_natsida.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
 
 .content {
@@ -102,9 +104,14 @@ h1 {
     box-shadow: 0 0 0 1px #222, 0 7px 0 1px #222, 0 14px 0 1px #222
   }
 
-  /* Hide top bar background */
-  .top-bar, .top-bar.expanded .title-area {
+  /* Hide top bar background when unexpanded */
+  .top-bar {
     background: none;
+  }
+
+  /* Add a white background to the top bar when the hamburger menu is expanded */
+  .top-bar.expanded .title-area {
+    background: #fff;
   }
 
   /* Changes the background of the list items in the top bar*/

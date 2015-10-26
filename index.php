@@ -20,7 +20,7 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
     <ul class="title-area">
       <li class="name">
         <!-- The top bar will be misaligned if the title is removed: https://github.com/zurb/foundation/issues/918"-->
-        <h1><a href="#">Teknologföreningen</a></h1>
+        <h1><a href="#"></a></h1>
       </li>
       <!-- Adds the menu icon without any text-->
       <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
