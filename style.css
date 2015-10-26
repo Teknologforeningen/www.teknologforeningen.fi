@@ -68,8 +68,10 @@ h1 {
   font-family: "Montserrat-Bold", sans-serif;
 }
 
-img.tf-logo {
+object.tf-logo {
+  fill: white;
   max-height: 270px;
+  margin-bottom: 25px;
 }
 
 /* Hide links in top bar menu on desktop version */
