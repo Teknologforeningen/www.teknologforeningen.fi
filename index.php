@@ -32,10 +32,49 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
         <li><a href="#">Arbiturienter</a></li>
         <li><a href="#">Alumner</a></li>
         <li><a href="#">Samarbete</a></li>
+        <li class="mobile-links">
+          <a href="#">
+            <div class="row external-links">
+              <div class="small-4 columns">
+                <img src="assets/tf_natside_logon-05.svg" style="height: 64px">
+              </div>
+              <div class="small-8 columns">
+                <h3>Täffä</h3>
+                <span>Lunchrestaurang</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="mobile-links">
+          <a href="#">
+            <div class="row">
+              <div class="small-4 columns">
+                <img src="assets/tf_natside_logon-06.svg" style="height: 64px">
+              </div>
+              <div class="small-8 columns">
+                <h3>Täffä AB</h3>
+                <span>Beställningsrestaurang</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="mobile-links">
+          <a href="#">
+            <div class="row">
+              <div class="small-4 columns">
+                <img src="assets/tf_natside_logon-07.svg" style="height: 64px">
+              </div>
+              <div class="small-8 columns">
+                <h3>Träffpunkt Aalto</h3>
+                <span>Fin text hit kom</span>
+              </div>
+            </div>
+          </a>
+        </li>
       </ul>
     </section>
   </nav>
-  <div id="content">
+  <div class="content">
     <div class="row">
       <div class="small-6 small-centered column">
         <img src="assets/tf_natside_logon-08.svg" style="tf-logo" alt="Teknologföreningens logga">
@@ -43,7 +82,9 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
     </div>
     <div class="row">
       <div class="small-12 small-centered column">
-        <?php echo $TaffaAPI->getNextMenu();?>
+        <div class="todays-menu">
+          <?php echo $TaffaAPI->getNextMenu();?>
+        </div>
       </div>
     </div>
     <div class="row external-links">

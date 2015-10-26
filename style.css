@@ -30,15 +30,22 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  font: "Montserrat-Light", sans-serif;
+  font-family: "Montserrat-Light", sans-serif;
 }
 
-#content {
+.content {
   flex: 1;
 }
 
-.remove-padding {
-  padding: 0;
+nav, footer {
+  flex: none;
+}
+
+/* Hide the links to Täffä, Täffä AB and Träffpunkt Aalto on mobile devices (shown in the hamburger menu instead) */
+@media screen and (max-width: 40em) {
+  .external-links {
+    display: none;
+  }
 }
 
 .external-links .columns {
@@ -62,6 +69,14 @@ img.tf-logo {
   max-height: 270px;
 }
 
+/* Hide links in top bar menu on desktop version */
+@media not screen and (max-width: 40em) {
+  li.mobile-links {
+    color: black;
+    display: none;
+  }
+}
+
 footer ul {
   text-align: center;
 }
@@ -75,6 +90,31 @@ h1 {
   font-size: 100px;
 }
 
+/* Mobile version specific properties of the top bar */
+@media screen and (max-width: 40em) {
+
+  .columns {
+    padding: 0;
+  }
+
+  /* Colors the hamburger menu */
+  .top-bar .toggle-topbar.menu-icon a span::after, .top-bar.expanded .toggle-topbar a span::after {
+    box-shadow: 0 0 0 1px #222, 0 7px 0 1px #222, 0 14px 0 1px #222
+  }
+
+  /* Hide top bar background */
+  .top-bar, .top-bar.expanded .title-area {
+    background: none;
+  }
+
+  /* Changes the background of the list items in the top bar*/
+  .top-bar-section ul li {
+    background-color: #fff;
+  }
+}
+
 .top-bar-section ul li > a {
+  text-transform: capitalize;
   font-family: "Montserrat-Light", sans-serif;
+  color: #222;
 }
