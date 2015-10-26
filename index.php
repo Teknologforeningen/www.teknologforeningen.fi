@@ -34,7 +34,7 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
         <li><a href="#">Samarbete</a></li>
         <li class="mobile-links">
           <a href="#">
-            <div class="row external-links">
+            <div class="row">
               <div class="small-4 columns">
                 <img src="assets/tf_natside_logon-05.svg" style="height: 64px">
               </div>
