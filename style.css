@@ -22,6 +22,10 @@
   font-style: normal;
 }
 
+a {
+  color: #222;
+}
+
 body {
   font: "Montserrat-Light", sans-serif;
 }
