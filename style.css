@@ -151,6 +151,7 @@ h1 {
 
 .top-bar-section ul li > a {
   font-family: "Montserrat-Light", sans-serif;
+  text-transform: uppercase;
   color: #222;
 }
 
