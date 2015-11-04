@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/normalize.css">
 
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
 <body>
@@ -26,7 +26,7 @@
     <ul class="title-area">
       <li class="name">
         <!-- The top bar will be misaligned if the title is removed: https://github.com/zurb/foundation/issues/918"-->
-        <h1><a href="#">Teknologföreningen</a></h1>
+        <h1><a href="#"></a></h1>
       </li>
       <!-- Adds the menu icon without any text-->
       <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
@@ -38,32 +38,113 @@
         <li><a href="#">Arbiturienter</a></li>
         <li><a href="#">Alumner</a></li>
         <li><a href="#">Samarbete</a></li>
+        <li class="mobile-links">
+          <a href="#">
+            <div class="row">
+              <div class="small-4 columns">
+                <img src="assets/tf_natside_logon-05.svg" style="height: 64px">
+              </div>
+              <div class="small-8 columns">
+                <h3>Täffä</h3>
+                <span>Lunchrestaurang</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="mobile-links">
+          <a href="#">
+            <div class="row">
+              <div class="small-4 columns">
+                <img src="assets/tf_natside_logon-06.svg" style="height: 64px">
+              </div>
+              <div class="small-8 columns">
+                <h3>Täffä AB</h3>
+                <span>Beställningsrestaurang</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="mobile-links">
+          <a href="#">
+            <div class="row">
+              <div class="small-4 columns">
+                <img src="assets/tf_natside_logon-07.svg" style="height: 64px">
+              </div>
+              <div class="small-8 columns">
+                <h3>Träffpunkt Aalto</h3>
+                <span>Fin text hit kom</span>
+              </div>
+            </div>
+          </a>
+        </li>
       </ul>
     </section>
   </nav>
-  <div class="row">
-    <div class="small-6 small-centered column">
-      <img src="assets/tf_natside_logon-08.svg" style="tf-logo" alt="Teknologföreningens logga">
+  <div class="content">
+    <div class="row">
+      <div class="small-6 small-centered column">
+        <object class="tf-logo" type="image/svg+xml" data="assets/tf_natside_logon-08.svg"></object>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 small-centered medium-centered column">
+        <div class="todays-menu">
+          <?php echo $TaffaAPI->getNextMenu();?>
+        </div>
+      </div>
+    </div>
+    <div class="row external-links">
+      <div class="small-12 medium-4 columns">
+        <a href="#">
+          <div class="row">
+            <div class="small-4 columns">
+              <img src="assets/tf_natside_logon-05.svg" style="height: 64px">
+            </div>
+            <div class="small-8 columns">
+              <h3>Täffä</h3>
+              <span>Lunchrestaurang</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="small-12 medium-4 columns">
+        <a href="#">
+          <div class="row">
+            <div class="small-4 columns">
+              <img src="assets/tf_natside_logon-06.svg" style="height: 64px">
+            </div>
+            <div class="small-8 columns">
+              <h3>Täffä AB</h3>
+              <span>Beställningsrestaurang</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="small-12 medium-4 columns">
+        <a href="#">
+          <div class="row">
+            <div class="small-4 columns">
+              <img src="assets/tf_natside_logon-07.svg" style="height: 64px">
+            </div>
+            <div class="small-8 columns">
+              <h3>Träffpunkt Aalto</h3>
+              <span>Fin text hit kom</span>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
-  <div class="row">
-    <div class="small-12 small-centered column">
-      <?php echo $TaffaAPI->getNextMenu();?>
+  <footer class="footer">
+    <div class="row full-width">
     </div>
-  </div>
-  <ul>
-    <li><a href="#"><img src="assets/tf_natside_logon-05.svg" style="height: 64px"><span><h3>Täffä</h3><p>Teknologrestaurang</p></span></a> </li>
-    <li><a href="#"><img src="assets/tf_natside_logon-06.svg" style="height: 64px"><span><h3>Täffä AB</h3><p>Beställningsrestaurang</p></span></a></li>
-    <li><a href="#"><img src="assets/tf_natside_logon-07.svg" style="height: 64px"><span><h3>Träffpunkt Aalto</h3></span></a></li>
-  </ul>
-  <footer>
     <ul>
       <li><a href="#">Suomeksi</a></li>
       <li><a href="#">In English</a></li>
     </ul>
   </footer>
 
-  <script src="js/vendor/jquery.js"></script>
+  <script src="js/jquery.js"></script>
   <script src="js/foundation.min.js"></script>
   <script>
   $(document).foundation();
