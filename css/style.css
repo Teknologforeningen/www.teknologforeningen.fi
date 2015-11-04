@@ -139,6 +139,11 @@ h1 {
     background: none;
   }
 
+  /* Margin to the TF logo when the hamburger menu is expanded*/
+  .top-bar.expanded {
+    margin-bottom: 25px;
+  }
+
   /* Add a white background to the top bar when the hamburger menu is expanded */
   .top-bar.expanded .title-area {
     background: #fff;
