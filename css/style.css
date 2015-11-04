@@ -68,8 +68,7 @@ h1 {
   font-family: "Montserrat-Bold", sans-serif;
 }
 
-object.tf-logo {
-  fill: white;
+img.tf-logo {
   max-height: 270px;
   margin-bottom: 25px;
 }
