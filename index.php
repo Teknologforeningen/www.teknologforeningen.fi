@@ -97,7 +97,7 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
         <a href="#">
           <div class="row">
             <div class="small-3 columns">
-              <img src="assets/tf_natside_logon-05-white.svg" style="height: 64px">
+              <img src="assets/tf_natside_logon-01.svg" style="height: 64px">
             </div>
             <div class="small-9 columns">
               <h3>Täffä</h3>
@@ -110,7 +110,7 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
         <a href="#">
           <div class="row">
             <div class="small-3 columns">
-              <img src="assets/tf_natside_logon-06-white.svg" style="height: 64px">
+              <img src="assets/tf_natside_logon-02.svg" style="height: 64px">
             </div>
             <div class="small-9 columns">
               <h3>Täffä AB</h3>
@@ -123,7 +123,7 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
         <a href="#">
           <div class="row">
             <div class="small-3 columns">
-              <img src="assets/tf_natside_logon-07-white.svg" style="height: 64px">
+              <img src="assets/tf_natside_logon-03.svg" style="height: 64px">
             </div>
             <div class="small-9 columns">
               <h3>Träffpunkt Aalto</h3>
