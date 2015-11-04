@@ -5,7 +5,7 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Hej TF</title>
+  <title>Teknologföreningen</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -130,8 +130,6 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
     </div>
   </div>
   <footer class="footer">
-    <div class="row full-width">
-    </div>
     <ul>
       <li><a href="#">Suomeksi</a></li>
       <li><a href="#">In English</a></li>
