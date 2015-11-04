@@ -81,7 +81,7 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
       </div>
     </div>
     <div class="row">
-      <div class="small-12 small-centered medium-centered column">
+      <div class="todays-menu-container small-12 small-centered medium-centered column">
         <div class="todays-menu">
           <?php echo $TaffaAPI->getNextMenu();?>
         </div>
