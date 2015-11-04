@@ -92,19 +92,12 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
         </ul>
       </div>
     </div>
-    <div class="row">
-      <div class="todays-menu-container small-12 small-centered medium-centered column">
-        <div class="todays-menu">
-          <?php echo $TaffaAPI->getNextMenu();?>
-        </div>
-      </div>
-    </div>
     <div class="row external-links">
       <div class="small-12 medium-4 columns">
         <a href="#">
           <div class="row">
             <div class="small-3 columns">
-              <img src="assets/tf_natside_logon-05.svg" style="height: 64px">
+              <img src="assets/tf_natside_logon-05-white.svg" style="height: 64px">
             </div>
             <div class="small-9 columns">
               <h3>Täffä</h3>
@@ -117,7 +110,7 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
         <a href="#">
           <div class="row">
             <div class="small-3 columns">
-              <img src="assets/tf_natside_logon-06.svg" style="height: 64px">
+              <img src="assets/tf_natside_logon-06-white.svg" style="height: 64px">
             </div>
             <div class="small-9 columns">
               <h3>Täffä AB</h3>
@@ -130,7 +123,7 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
         <a href="#">
           <div class="row">
             <div class="small-3 columns">
-              <img src="assets/tf_natside_logon-07.svg" style="height: 64px">
+              <img src="assets/tf_natside_logon-07-white.svg" style="height: 64px">
             </div>
             <div class="small-9 columns">
               <h3>Träffpunkt Aalto</h3>
@@ -138,6 +131,13 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
             </div>
           </div>
         </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="todays-menu-container small-12 small-centered medium-centered column">
+        <div class="todays-menu">
+          <?php echo $TaffaAPI->getNextMenu();?>
+        </div>
       </div>
     </div>
   </div>
