@@ -68,6 +68,10 @@ h1 {
   font-family: "Montserrat-Bold", sans-serif;
 }
 
+h3 {
+  color: white;
+}
+
 img.tf-logo {
   max-height: 270px;
   margin-bottom: 25px;
@@ -90,9 +94,16 @@ footer ul li {
   display: inline;
 }
 
-h1 {
-  font-family: "Montserrat-Bold",sans-serif;
-  font-size: 100px;
+ul.page-links-desktop {
+  font-size: 1.25em;
+  text-align: center;
+}
+
+.page-links-desktop li {
+  padding: 5px;
+  font-weight: bold;
+  display: inline;
+  list-style-type: none;
 }
 
 .todays-menu {
@@ -157,6 +168,11 @@ h1 {
   /* Changes the background of the list items in the top bar*/
   .top-bar-section ul li {
     background-color: #fff;
+  }
+
+  /* Hide page links from mobile version */
+  ul.page-links-desktop {
+    display: none;
   }
 }
 

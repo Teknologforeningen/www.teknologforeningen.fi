@@ -25,6 +25,7 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
       <!-- Adds the menu icon without any text-->
       <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
     </ul>
+    <!-- Top bar for mobile -->
     <section class="top-bar-section">
       <ul class="left">
         <li><a href="#">Om Teknologföreningen</a></li>
@@ -78,6 +79,17 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
     <div class="row">
       <div class="small-6 small-centered column">
         <img class="tf-logo" src="assets/tf_natside_logon-08.svg">
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 column">
+        <ul class="page-links-desktop">
+          <li><a href="#">Om Teknologföreningen</a></li>
+          <li><a href="#">Medlemsportal</a></li>
+          <li><a href="#">Arbiturienter</a></li>
+          <li><a href="#">Alumner</a></li>
+          <li><a href="#">Samarbete</a></li>
+        </ul>
       </div>
     </div>
     <div class="row">
