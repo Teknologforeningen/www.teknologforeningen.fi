@@ -12,7 +12,7 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/normalize.css">
 
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
 <body>
@@ -81,7 +81,7 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
       </div>
     </div>
     <div class="row">
-      <div class="small-12 small-centered column">
+      <div class="small-12 small-centered medium-centered column">
         <div class="todays-menu">
           <?php echo $TaffaAPI->getNextMenu();?>
         </div>
