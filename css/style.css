@@ -44,13 +44,6 @@ nav {
   flex: none;
 }
 
-/* Hide the links to Täffä, Täffä AB and Träffpunkt Aalto on mobile devices (shown in the hamburger menu instead) */
-@media screen and (max-width: 40em) {
-  .external-links {
-    display: none;
-  }
-}
-
 .external-links .columns {
   padding-left: 0;
   padding-right: 0;
@@ -75,14 +68,6 @@ h3 {
 img.tf-logo {
   max-height: 270px;
   margin-bottom: 25px;
-}
-
-/* Hide links in top bar menu on desktop version */
-@media not screen and (max-width: 40em) {
-  li.mobile-links {
-    color: black;
-    display: none;
-  }
 }
 
 footer ul {
@@ -133,11 +118,26 @@ ul.page-links-desktop {
   text-transform: uppercase;
 }
 
-/* Mobile version specific properties of the top bar */
+/* Desktop specific properties */
+@media not screen and (max-width: 40em) {
+  li.mobile-links {
+    display: none;
+  }
+
+  .top-bar {
+    display: none;
+  }
+}
+
+/* Mobile specific properties */
 @media screen and (max-width: 40em) {
 
   .columns {
     padding: 0;
+  }
+
+  .external-links {
+    display: none;
   }
 
   /* Colors the hamburger menu when unexpanded */
