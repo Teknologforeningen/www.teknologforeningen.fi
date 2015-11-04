@@ -1,0 +1,162 @@
+/* "Teknologröd" (the color of Teknologföreningen): #b20738 */
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url('../fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Montserrat-Bold.otf')  format('opentype'),
+  url('../fonts/Montserrat-Bold.woff') format('woff'),
+	url('../fonts/Montserrat-Bold.ttf')  format('truetype'),
+	url('../fonts/Montserrat-Bold.svg#Montserrat-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url('../fonts/Montserrat-Light.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Montserrat-Light.otf')  format('opentype'),
+	url('../fonts/Montserrat-Light.woff') format('woff'),
+	url('../fonts/Montserrat-Light.ttf')  format('truetype'),
+	url('../fonts/Montserrat-Light.svg#Montserrat-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+a, a:hover {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: "Montserrat-Light", sans-serif;
+  background: url("../assets/tf_natsida.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.content {
+  flex: 1;
+}
+
+nav, footer {
+  flex: none;
+}
+
+/* Hide the links to Täffä, Täffä AB and Träffpunkt Aalto on mobile devices (shown in the hamburger menu instead) */
+@media screen and (max-width: 40em) {
+  .external-links {
+    display: none;
+  }
+}
+
+.external-links .columns {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.external-links .columns {
+  margin-bottom: 10px;
+}
+
+.external-links h3 {
+  margin: 0;
+}
+
+h1 {
+  font-family: "Montserrat-Bold", sans-serif;
+}
+
+object.tf-logo {
+  fill: white;
+  max-height: 270px;
+  margin-bottom: 25px;
+}
+
+/* Hide links in top bar menu on desktop version */
+@media not screen and (max-width: 40em) {
+  li.mobile-links {
+    color: black;
+    display: none;
+  }
+}
+
+footer ul {
+  text-align: center;
+}
+
+footer ul li {
+  padding: 5px;
+  display: inline;
+}
+
+h1 {
+  font-family: "Montserrat-Bold",sans-serif;
+  font-size: 100px;
+}
+
+.todays-menu {
+  background-color: white;
+  padding: 5%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #222;
+  text-align: center;
+}
+
+.todays-menu ul {
+  list-style: none;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+.todays-menu p {
+  color: #b11e3a;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+/* Mobile version specific properties of the top bar */
+@media screen and (max-width: 40em) {
+
+  .columns {
+    padding: 0;
+  }
+
+  /* Colors the hamburger menu when unexpanded */
+  .top-bar .toggle-topbar.menu-icon a span::after {
+    box-shadow: 0 0 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff
+  }
+
+  /* Colors the hamburger menu when expanded */
+  .top-bar.expanded .toggle-topbar a span::after {
+    box-shadow: 0 0 0 1px #222, 0 7px 0 1px #222, 0 14px 0 1px #222
+  }
+
+  /* Hide top bar background when unexpanded */
+  .top-bar {
+    background: none;
+  }
+
+  /* Add a white background to the top bar when the hamburger menu is expanded */
+  .top-bar.expanded .title-area {
+    background: #fff;
+  }
+
+  /* Changes the background of the list items in the top bar*/
+  .top-bar-section ul li {
+    background-color: #fff;
+  }
+}
+
+.top-bar-section ul li > a {
+  font-family: "Montserrat-Light", sans-serif;
+  text-transform: uppercase;
+  color: #222;
+}
+
+.top-bar-section ul li > a span {
+  text-transform: none;
+}
