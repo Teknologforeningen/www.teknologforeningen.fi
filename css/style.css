@@ -40,7 +40,7 @@ body {
   flex: 1;
 }
 
-nav, footer {
+nav {
   flex: none;
 }
 
