@@ -81,7 +81,7 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
         <img class="tf-logo" src="assets/tf_natside_logon-04.svg">
       </div>
     </div>
-    <div class="row">
+    <div class="row full-width">
       <div class="small-12 column">
         <ul class="page-links-desktop">
           <li><a href="#">Om Teknologföreningen</a></li>
