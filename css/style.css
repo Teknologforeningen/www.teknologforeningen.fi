@@ -86,7 +86,9 @@ footer ul li {
 }
 
 ul.page-links-desktop {
-  font-size: 1.25em;
+  font-size: 0.9em;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-weight: bold;
   text-align: center;
   margin-bottom: 0;
 }
