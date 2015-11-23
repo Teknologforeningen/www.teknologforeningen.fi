@@ -28,16 +28,16 @@ a, a:hover {
 }
 
 body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
   font-family: "Montserrat-Light", sans-serif;
   background: url("../assets/tf_natsida.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
-nav {
-  flex: none;
+.content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
 }
 
 .external-links .columns {
@@ -68,6 +68,12 @@ h3 {
 
 img.tf-logo {
   max-height: 270px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 footer ul {
@@ -131,13 +137,6 @@ ul.page-links-desktop {
 
 /* General desktop specific properties */
 @media not screen and (max-width: 40em) {
-  .content {
-    flex: 1;
-  }
-
-  img.tf-logo {
-    margin-top: 1.5em;
-  }
 
   li.mobile-links {
     display: none;
@@ -160,7 +159,7 @@ ul.page-links-desktop {
   }
 }
 
-@media screen and (min-height: 800px) {
+/*@media screen and (min-height: 800px) {
   img.tf-logo {
     margin-top: 6em;
   }
@@ -182,7 +181,7 @@ ul.page-links-desktop {
   img.tf-logo {
     margin-top: 15em;
   }
-}
+}*/
 
 /* Mobile specific properties */
 @media screen and (max-width: 40em) {
@@ -220,6 +219,7 @@ ul.page-links-desktop {
 
   /* Margin to the TF logo when the hamburger menu is expanded*/
   .top-bar.expanded {
+    z-index: 10;
     margin-bottom: 25px;
   }
 
