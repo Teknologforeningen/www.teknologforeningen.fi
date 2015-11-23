@@ -50,6 +50,7 @@ body {
 }
 
 .external-links span {
+  font-size: 0.8em;
   text-transform: none;
 }
 
@@ -66,8 +67,9 @@ h1 {
 
 h3 {
   color: white;
+  font-family: "Montserrat-Bold", sans-serif;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 img.tf-logo {
