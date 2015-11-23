@@ -37,19 +37,6 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
           <a href="#">
             <div class="row">
               <div class="small-4 columns">
-                <img src="assets/tf_natside_logon-05.svg" style="height: 64px">
-              </div>
-              <div class="small-8 columns">
-                <h3>Täffä</h3>
-                <span>Lunchrestaurang</span>
-              </div>
-            </div>
-          </a>
-        </li>
-        <li class="mobile-links">
-          <a href="#">
-            <div class="row">
-              <div class="small-4 columns">
                 <img src="assets/tf_natside_logon-06.svg" style="height: 64px">
               </div>
               <div class="small-8 columns">
@@ -63,11 +50,24 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
           <a href="#">
             <div class="row">
               <div class="small-4 columns">
+                <img src="assets/tf_natside_logon-05.svg" style="height: 64px">
+              </div>
+              <div class="small-8 columns">
+                <h3>Täffä</h3>
+                <span>Lunchrestaurang</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="mobile-links">
+          <a href="#">
+            <div class="row">
+              <div class="small-4 columns">
                 <img src="assets/tf_natside_logon-07.svg" style="height: 64px">
               </div>
               <div class="small-8 columns">
                 <h3>Träffpunkt Aalto</h3>
-                <span>Fin text hit kom</span>
+                <span>Visionsprojektet</span>
               </div>
             </div>
           </a>
@@ -97,19 +97,6 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
         <a href="#">
           <div class="row">
             <div class="small-3 columns">
-              <img src="assets/tf_natside_logon-01.svg" style="height: 64px">
-            </div>
-            <div class="small-9 columns">
-              <h3>Täffä</h3>
-              <span>Lunchrestaurang</span>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="small-12 medium-4 columns">
-        <a href="#">
-          <div class="row">
-            <div class="small-3 columns">
               <img src="assets/tf_natside_logon-02.svg" style="height: 64px">
             </div>
             <div class="small-9 columns">
@@ -123,11 +110,24 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
         <a href="#">
           <div class="row">
             <div class="small-3 columns">
+              <img src="assets/tf_natside_logon-01.svg" style="height: 64px">
+            </div>
+            <div class="small-9 columns">
+              <h3>Täffä</h3>
+              <span>Lunchrestaurang</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="small-12 medium-4 columns">
+        <a href="#">
+          <div class="row">
+            <div class="small-3 columns">
               <img src="assets/tf_natside_logon-03.svg" style="height: 64px">
             </div>
             <div class="small-9 columns">
               <h3>Träffpunkt Aalto</h3>
-              <span>Fin text hit kom</span>
+              <span>Visionsprojektet</span>
             </div>
           </div>
         </a>
