@@ -35,40 +35,28 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
         <li><a href="#">Samarbete</a></li>
         <li class="mobile-links">
           <a href="#">
-            <div class="row">
-              <div class="small-4 columns">
-                <img src="assets/tf_natside_logon-06.svg" style="height: 64px">
-              </div>
-              <div class="small-8 columns">
-                <h3>Täffä AB</h3>
-                <span>Beställningsrestaurang</span>
-              </div>
+            <img src="assets/tf_natside_logon-06.svg" style="height: 64px">
+            <div class="link-container">
+              <h3>Täffä AB</h3>
+              <span>Beställningsrestaurang</span>
             </div>
           </a>
         </li>
         <li class="mobile-links">
           <a href="#">
-            <div class="row">
-              <div class="small-4 columns">
-                <img src="assets/tf_natside_logon-05.svg" style="height: 64px">
-              </div>
-              <div class="small-8 columns">
-                <h3>Täffä</h3>
-                <span>Lunchrestaurang</span>
-              </div>
+            <img src="assets/tf_natside_logon-05.svg" style="height: 64px">
+            <div class="link-container">
+              <h3>Täffä</h3>
+              <span>Lunchrestaurang</span>
             </div>
           </a>
         </li>
         <li class="mobile-links">
           <a href="#">
-            <div class="row">
-              <div class="small-4 columns">
-                <img src="assets/tf_natside_logon-07.svg" style="height: 64px">
-              </div>
-              <div class="small-8 columns">
-                <h3>Träffpunkt Aalto</h3>
-                <span>Visionsprojektet</span>
-              </div>
+            <img src="assets/tf_natside_logon-07.svg" style="height: 64px">
+            <div class="link-container">
+              <h3>Träffpunkt Aalto</h3>
+              <span>Visionsprojektet</span>
             </div>
           </a>
         </li>
@@ -95,40 +83,28 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
     <div class="row external-links">
       <div class="small-12 medium-4 columns">
         <a href="#">
-          <div class="row">
-            <div class="small-3 columns">
-              <img src="assets/tf_natside_logon-02.svg" style="height: 64px">
-            </div>
-            <div class="small-9 columns">
-              <h3>Täffä AB</h3>
-              <span>Beställningsrestaurang</span>
-            </div>
+          <img src="assets/tf_natside_logon-02.svg" style="height: 64px">
+          <div class="link-container">
+            <h3>Täffä AB</h3><br>
+            <span>Beställningsrestaurang</span>
           </div>
         </a>
       </div>
       <div class="small-12 medium-4 columns">
         <a href="#">
-          <div class="row">
-            <div class="small-3 columns">
-              <img src="assets/tf_natside_logon-01.svg" style="height: 64px">
-            </div>
-            <div class="small-9 columns">
-              <h3>Täffä</h3>
-              <span>Lunchrestaurang</span>
-            </div>
+          <img src="assets/tf_natside_logon-01.svg" style="height: 64px">
+          <div class="link-container">
+            <h3>Täffä</h3><br>
+            <span>Lunchrestaurang</span>
           </div>
         </a>
       </div>
       <div class="small-12 medium-4 columns">
         <a href="#">
-          <div class="row">
-            <div class="small-3 columns">
-              <img src="assets/tf_natside_logon-03.svg" style="height: 64px">
-            </div>
-            <div class="small-9 columns">
-              <h3>Träffpunkt Aalto</h3>
-              <span>Visionsprojektet</span>
-            </div>
+          <img src="assets/tf_natside_logon-03.svg" style="height: 64px">
+          <div class="link-container">
+            <h3>Träffpunkt Aalto</h3><br>
+            <span>Visionsprojektet</span>
           </div>
         </a>
       </div>

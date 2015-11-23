@@ -40,18 +40,43 @@ body {
   width: 100%;
 }
 
+.external-links a {
+  display: inline-block;
+}
+
 .external-links .columns {
   padding-left: 0;
   padding-right: 0;
 }
 
+.external-links img, .mobile-links img {
+  float: left;
+}
+
 .external-links h3 {
   margin: 0;
+  display: inline;
 }
 
 .external-links span {
   font-size: 0.8em;
   text-transform: none;
+}
+
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+footer ul {
+  text-align: center;
+}
+
+footer ul li {
+  padding: 5px;
+  display: inline;
 }
 
 .full-width {
@@ -72,23 +97,15 @@ h3 {
   font-size: 1em;
 }
 
+.link-container {
+  display: inline-block;
+  text-align: left;
+  margin-top: 6px;
+  margin-left: 16px;
+}
+
 img.tf-logo {
   max-height: 270px;
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-footer ul {
-  text-align: center;
-}
-
-footer ul li {
-  padding: 5px;
-  display: inline;
 }
 
 ul.page-links-desktop {
@@ -165,36 +182,13 @@ ul.page-links-desktop {
 
   .row.external-links {
     margin-bottom: 2em;
+    text-align: center;
   }
 
   .top-bar {
     display: none;
   }
 }
-
-/*@media screen and (min-height: 800px) {
-  img.tf-logo {
-    margin-top: 6em;
-  }
-}
-
-@media screen and (min-height: 900px) {
-  img.tf-logo {
-    margin-top: 9em;
-  }
-}
-
-@media screen and (min-height: 1000px) {
-  img.tf-logo {
-    margin-top: 12em;
-  }
-}
-
-@media screen and (min-height: 1100) {
-  img.tf-logo {
-    margin-top: 15em;
-  }
-}*/
 
 /* Mobile specific properties */
 @media screen and (max-width: 40em) {
@@ -213,6 +207,10 @@ ul.page-links-desktop {
 
   img.tf-logo {
     margin-bottom: 25px;
+  }
+
+  h3 {
+    color: black;
   }
 
   /* Colors the hamburger menu when unexpanded */
