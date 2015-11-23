@@ -45,10 +45,6 @@ nav {
   padding-right: 0;
 }
 
-.external-links .columns {
-  margin-bottom: 10px;
-}
-
 .external-links h3 {
   margin: 0;
 }
@@ -72,7 +68,6 @@ h3 {
 
 img.tf-logo {
   max-height: 270px;
-  margin-bottom: 25px;
 }
 
 footer ul {
@@ -87,6 +82,7 @@ footer ul li {
 ul.page-links-desktop {
   font-size: 1.25em;
   text-align: center;
+  margin-bottom: 0;
 }
 
 .page-links-desktop li {
@@ -123,6 +119,16 @@ ul.page-links-desktop {
   text-transform: uppercase;
 }
 
+.top-bar-section ul li > a {
+  font-family: "Montserrat-Light", sans-serif;
+  text-transform: uppercase;
+  color: #222;
+}
+
+.top-bar-section ul li > a span {
+  text-transform: none;
+}
+
 /* General desktop specific properties */
 @media not screen and (max-width: 40em) {
   .content {
@@ -135,6 +141,18 @@ ul.page-links-desktop {
 
   li.mobile-links {
     display: none;
+  }
+
+  .row.tf-logo {
+    margin-bottom: 3em;
+  }
+
+  .row.internal-links {
+    margin-bottom: 2em;
+  }
+
+  .row.external-links {
+    margin-bottom: 2em;
   }
 
   .top-bar {
@@ -177,6 +195,14 @@ ul.page-links-desktop {
     display: none;
   }
 
+  .external-links .columns {
+    margin-bottom: 10px;
+  }
+
+  img.tf-logo {
+    margin-bottom: 25px;
+  }
+
   /* Colors the hamburger menu when unexpanded */
   .top-bar .toggle-topbar.menu-icon a span::after {
     box-shadow: 0 0 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff
@@ -211,14 +237,4 @@ ul.page-links-desktop {
   ul.page-links-desktop {
     display: none;
   }
-}
-
-.top-bar-section ul li > a {
-  font-family: "Montserrat-Light", sans-serif;
-  text-transform: uppercase;
-  color: #222;
-}
-
-.top-bar-section ul li > a span {
-  text-transform: none;
 }

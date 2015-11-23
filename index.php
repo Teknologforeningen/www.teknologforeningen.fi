@@ -76,12 +76,12 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
     </section>
   </nav>
   <div class="content">
-    <div class="row">
+    <div class="row tf-logo">
       <div class="small-6 small-centered column">
         <img class="tf-logo" src="assets/tf_natside_logon-04.svg">
       </div>
     </div>
-    <div class="row full-width">
+    <div class="row internal-links full-width">
       <div class="small-12 column">
         <ul class="page-links-desktop">
           <li><a href="#">Om Teknologföreningen</a></li>
