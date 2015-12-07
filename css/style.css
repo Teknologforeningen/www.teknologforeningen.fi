@@ -185,6 +185,21 @@ ul.page-links-desktop {
     text-align: center;
   }
 
+  /* Increase vertical margin between elements on larger displays */
+  @media screen and (min-height: 900px) {
+    .row.tf-logo {
+      margin-bottom: 5em;
+    }
+
+    .row.internal-links {
+      margin-bottom: 3em;
+    }
+
+    .row.external-links {
+      margin-bottom: 4em;
+    }
+  }
+
   .top-bar {
     display: none;
   }
