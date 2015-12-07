@@ -1,6 +1,54 @@
 <?php
 include_once './TaffaAPI.class.php';
 $TaffaAPI = new TaffaAPI(@$_GET['lang']);
+
+$translations = array(
+  "sv" => array(
+    "about" => "Om Teknologföreningen",
+    "member" => "Medlemsportal",
+    "abi" => "Arbiturienter",
+    "alumni" => "Alumner",
+    "coop" => "Samarbete",
+    "taffaAB" => "Täffä AB",
+    "taffaAB_desc" => "Beställningsrestaurang",
+    "taffa" => "Täffä",
+    "taffa_desc" => "Lunchrestaurang",
+    "traffpunkt" => "Träffpunkt Aalto",
+    "traffpunkt_desc" => "Visionsprojektet"
+  ),
+  "en" => array(
+    "about" => "About Teknologföreningen",
+    "member" => "",
+    "abi" => "",
+    "alumni" => "",
+    "coop" => "Cooperation",
+    "taffaAB" => "Täffä AB",
+    "taffaAB_desc" => "Catering restaurant",
+    "taffa" => "Täffä",
+    "taffa_desc" => "Lunch restaurant",
+    "traffpunkt" => "Träffpunkt Aalto",
+    "traffpunkt_desc" => "Visionsprojektet?"
+  ),
+  "fi" => array(
+    "about" => "Teknologföreningen",
+    "member" => "",
+    "abi" => "",
+    "alumni" => "",
+    "coop" => "Yhteistyö & rekry",
+    "taffaAB" => "Täffä AB",
+    "taffaAB_desc" => "Tilausravintola",
+    "taffa" => "Täffä",
+    "taffa_desc" => "Lounasravintola",
+    "traffpunkt" => "Träffpunkt Aalto",
+    "traffpunkt_desc" => "Visionsprojektet?"
+  )
+);
+
+$lang = $_GET['lang'];
+if ($lang != "sv" && $lang != "en" && $lang != "fi") {
+  $lang = "sv";
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,17 +76,17 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
     <!-- Top bar for mobile -->
     <section class="top-bar-section">
       <ul class="left">
-        <li class="mobile-internal-links"><a href="#">Om Teknologföreningen</a></li>
-        <li class="mobile-internal-links"><a href="#">Medlemsportal</a></li>
-        <li class="mobile-internal-links"><a href="#">Arbiturienter</a></li>
-        <li class="mobile-internal-links"><a href="#">Alumner</a></li>
-        <li class="mobile-internal-links"><a href="#">Samarbete</a></li>
+        <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["about"]?></a></li>
+        <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["member"]?></a></li>
+        <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["abi"]?></a></li>
+        <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["alumni"]?></a></li>
+        <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["coop"]?></a></li>
         <li class="mobile-external-links first">
           <a href="#">
             <img src="assets/tf_natside_logon-06.svg">
             <div class="link-container">
-              <h3>Täffä AB</h3>
-              <span>Beställningsrestaurang</span>
+              <h3><?php echo $translations[$lang]["taffaAB"]?></h3>
+              <span><?php echo $translations[$lang]["taffaAB_desc"]?></span>
             </div>
           </a>
         </li>
@@ -46,8 +94,8 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
           <a href="#">
             <img src="assets/tf_natside_logon-05.svg">
             <div class="link-container">
-              <h3>Täffä</h3>
-              <span>Lunchrestaurang</span>
+              <h3><?php echo $translations[$lang]["taffaAB"]?></h3>
+              <span><?php echo $translations[$lang]["taffaAB_desc"]?></span>
             </div>
           </a>
         </li>
@@ -55,8 +103,8 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
           <a href="#">
             <img src="assets/tf_natside_logon-07.svg">
             <div class="link-container">
-              <h3>Träffpunkt Aalto</h3>
-              <span>Visionsprojektet</span>
+              <h3><?php echo $translations[$lang]["traffpunkt"]?></h3>
+              <span><?php echo $translations[$lang]["traffpunkt_desc"]?></span>
             </div>
           </a>
         </li>
@@ -72,11 +120,11 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
     <div class="row internal-links full-width">
       <div class="small-12 column">
         <ul class="page-links-desktop">
-          <li><a href="#">Om Teknologföreningen</a></li>
-          <li><a href="#">Medlemsportal</a></li>
-          <li><a href="#">Arbiturienter</a></li>
-          <li><a href="#">Alumner</a></li>
-          <li><a href="#">Samarbete</a></li>
+          <li><a href="#"><?php echo $translations[$lang]["about"]?></a></li>
+          <li><a href="#"><?php echo $translations[$lang]["member"]?></a></li>
+          <li><a href="#"><?php echo $translations[$lang]["abi"]?></a></li>
+          <li><a href="#"><?php echo $translations[$lang]["alumni"]?></a></li>
+          <li><a href="#"><?php echo $translations[$lang]["coop"]?></a></li>
         </ul>
       </div>
     </div>
@@ -85,8 +133,8 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
         <a href="#">
           <img src="assets/tf_natside_logon-02.svg" style="height: 64px">
           <div class="link-container">
-            <h3>Täffä AB</h3><br>
-            <span>Beställningsrestaurang</span>
+            <h3><?php echo $translations[$lang]["taffaAB"]?></h3><br>
+            <span><?php echo $translations[$lang]["taffaAB_desc"]?></span>
           </div>
         </a>
       </div>
@@ -94,8 +142,8 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
         <a href="#">
           <img src="assets/tf_natside_logon-01.svg" style="height: 64px">
           <div class="link-container">
-            <h3>Täffä</h3><br>
-            <span>Lunchrestaurang</span>
+            <h3><?php echo $translations[$lang]["taffa"]?></h3><br>
+            <span><?php echo $translations[$lang]["taffaAB"]?></span>
           </div>
         </a>
       </div>
@@ -103,8 +151,8 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
         <a href="#">
           <img src="assets/tf_natside_logon-03.svg" style="height: 64px">
           <div class="link-container">
-            <h3>Träffpunkt Aalto</h3><br>
-            <span>Visionsprojektet</span>
+            <h3><?php echo $translations[$lang]["traffpunkt"]?></h3><br>
+            <span><?php echo $translations[$lang]["traffpunkt_desc"]?></span>
           </div>
         </a>
       </div>
@@ -119,8 +167,19 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
   </div>
   <footer class="footer">
     <ul>
-      <li><a href="#">Suomeksi</a></li>
-      <li><a href="#">In English</a></li>
+      <?php
+        //Language specific language links
+        if ($lang == "sv") {
+          echo '<li><a href="?lang=fi">Suomeksi</a></li>';
+          echo '<li><a href="?lang=en">In English</a></li>';
+        } else if ($lang == "en") {
+          echo '<li><a href="?lang=sv">På svenska</a></li>';
+          echo '<li><a href="?lang=fi">Suomeksi</a></li>';
+        } else {
+          echo '<li><a href="?lang=sv">På svenska</a></li>';
+          echo '<li><a href="?lang=en">In English</a></li>';
+        }
+       ?>
     </ul>
   </footer>
 
