@@ -81,7 +81,7 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
       </div>
     </div>
     <div class="row external-links">
-      <div class="small-12 medium-4 columns">
+      <div class="small-12 large-4 columns">
         <a href="#">
           <img src="assets/tf_natside_logon-02.svg" style="height: 64px">
           <div class="link-container">
@@ -90,7 +90,7 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
           </div>
         </a>
       </div>
-      <div class="small-12 medium-4 columns">
+      <div class="small-12 large-4 columns">
         <a href="#">
           <img src="assets/tf_natside_logon-01.svg" style="height: 64px">
           <div class="link-container">
@@ -99,7 +99,7 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
           </div>
         </a>
       </div>
-      <div class="small-12 medium-4 columns">
+      <div class="small-12 large-4 columns">
         <a href="#">
           <img src="assets/tf_natside_logon-03.svg" style="height: 64px">
           <div class="link-container">
@@ -110,7 +110,7 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
       </div>
     </div>
     <div class="row">
-      <div class="todays-menu-container small-12 small-centered medium-centered column">
+      <div class="todays-menu-container small-12 small-centered large-centered column">
         <div class="todays-menu">
           <?php echo $TaffaAPI->getNextMenu();?>
         </div>

@@ -166,7 +166,7 @@ ul.page-links-desktop {
 }
 
 /* General desktop specific properties */
-@media not screen and (max-width: 40em) {
+@media not screen and (max-width: 64.063em) {
 
   li.mobile-links {
     display: none;
@@ -206,7 +206,7 @@ ul.page-links-desktop {
 }
 
 /* Mobile specific properties */
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 64.063em) {
 
   .columns {
     padding: 0;
