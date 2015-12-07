@@ -49,7 +49,7 @@ body {
   padding-right: 0;
 }
 
-.external-links img, .mobile-links img {
+.external-links img, .mobile-external-links img {
   float: left;
 }
 
@@ -168,7 +168,7 @@ ul.page-links-desktop {
 /* General desktop specific properties */
 @media not screen and (max-width: 64.063em) {
 
-  li.mobile-links {
+  li.mobile-external-links {
     display: none;
   }
 
@@ -228,6 +228,34 @@ ul.page-links-desktop {
     color: black;
   }
 
+  .mobile-external-links {
+    padding: 6px 0 6px 24px;
+  }
+
+  .mobile-external-links.first {
+    padding-top: 20px;
+  }
+
+  .mobile-external-links img {
+    width: 48px;
+    margin-top: 8px;
+  }
+
+  .mobile-internal-links {
+    padding-left: 24px;
+  }
+
+  .row.tf-logo {
+    margin-bottom: 15%
+  }
+
+  /* Smaller margin for iPhone 4 */
+  @media screen and (max-height: 480px) {
+    .row.tf-logo {
+      margin-bottom: 10px;
+    }
+  }
+
   /* Colors the hamburger menu when unexpanded */
   .top-bar .toggle-topbar.menu-icon a span::after {
     box-shadow: 0 0 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff
@@ -243,10 +271,10 @@ ul.page-links-desktop {
     background: none;
   }
 
-  /* Margin to the TF logo when the hamburger menu is expanded*/
   .top-bar.expanded {
     z-index: 10;
-    margin-bottom: 25px;
+    height: 100%; /* Covers the screen when menu is expanded */
+    background-color: white;
   }
 
   /* Add a white background to the top bar when the hamburger menu is expanded */

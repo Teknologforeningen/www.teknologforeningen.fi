@@ -28,32 +28,32 @@ $TaffaAPI = new TaffaAPI(@$_GET['lang']);
     <!-- Top bar for mobile -->
     <section class="top-bar-section">
       <ul class="left">
-        <li><a href="#">Om Teknologföreningen</a></li>
-        <li><a href="#">Medlemsportal</a></li>
-        <li><a href="#">Arbiturienter</a></li>
-        <li><a href="#">Alumner</a></li>
-        <li><a href="#">Samarbete</a></li>
-        <li class="mobile-links">
+        <li class="mobile-internal-links"><a href="#">Om Teknologföreningen</a></li>
+        <li class="mobile-internal-links"><a href="#">Medlemsportal</a></li>
+        <li class="mobile-internal-links"><a href="#">Arbiturienter</a></li>
+        <li class="mobile-internal-links"><a href="#">Alumner</a></li>
+        <li class="mobile-internal-links"><a href="#">Samarbete</a></li>
+        <li class="mobile-external-links first">
           <a href="#">
-            <img src="assets/tf_natside_logon-06.svg" style="height: 64px">
+            <img src="assets/tf_natside_logon-06.svg">
             <div class="link-container">
               <h3>Täffä AB</h3>
               <span>Beställningsrestaurang</span>
             </div>
           </a>
         </li>
-        <li class="mobile-links">
+        <li class="mobile-external-links">
           <a href="#">
-            <img src="assets/tf_natside_logon-05.svg" style="height: 64px">
+            <img src="assets/tf_natside_logon-05.svg">
             <div class="link-container">
               <h3>Täffä</h3>
               <span>Lunchrestaurang</span>
             </div>
           </a>
         </li>
-        <li class="mobile-links">
+        <li class="mobile-external-links">
           <a href="#">
-            <img src="assets/tf_natside_logon-07.svg" style="height: 64px">
+            <img src="assets/tf_natside_logon-07.svg">
             <div class="link-container">
               <h3>Träffpunkt Aalto</h3>
               <span>Visionsprojektet</span>
