@@ -139,8 +139,8 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
             <li><a href="#"><?php echo $translations[$lang]["alumni"]?></a></li>
             <li><a href="#"><?php echo $translations[$lang]["coop"]?></a></li>
           <?php } else { ?>
-            <li><a href="#"><?php echo $translations[$lang]["about"]?></a></li>
-            <li><a href="#"><?php echo $translations[$lang]["coop"]?></a></li>
+            <li class="wider-links"><a href="#"><?php echo $translations[$lang]["about"]?></a></li>
+            <li class="wider-links"><a href="#"><?php echo $translations[$lang]["coop"]?></a></li>
           <?php } ?>
         </ul>
       </div>
