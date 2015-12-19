@@ -131,11 +131,17 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
     <div class="row internal-links full-width">
       <div class="small-12 column">
         <ul class="page-links-desktop">
-          <li><a href="#"><?php echo $translations[$lang]["about"]?></a></li>
-          <li><a href="#"><?php echo $translations[$lang]["member"]?></a></li>
-          <li><a href="#"><?php echo $translations[$lang]["abi"]?></a></li>
-          <li><a href="#"><?php echo $translations[$lang]["alumni"]?></a></li>
-          <li><a href="#"><?php echo $translations[$lang]["coop"]?></a></li>
+
+          <?php if ($lang == "sv") { //All links in Swedish, only About and Cooperation in English and Finnish ?>
+            <li><a href="#"><?php echo $translations[$lang]["about"]?></a></li>
+            <li><a href="#"><?php echo $translations[$lang]["member"]?></a></li>
+            <li><a href="#"><?php echo $translations[$lang]["abi"]?></a></li>
+            <li><a href="#"><?php echo $translations[$lang]["alumni"]?></a></li>
+            <li><a href="#"><?php echo $translations[$lang]["coop"]?></a></li>
+          <?php } else { ?>
+            <li><a href="#"><?php echo $translations[$lang]["about"]?></a></li>
+            <li><a href="#"><?php echo $translations[$lang]["coop"]?></a></li>
+          <?php } ?>
         </ul>
       </div>
     </div>
