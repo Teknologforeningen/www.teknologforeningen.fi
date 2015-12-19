@@ -82,11 +82,16 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
     <!-- Top bar for mobile -->
     <section class="top-bar-section">
       <ul class="left">
-        <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["about"]?></a></li>
-        <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["member"]?></a></li>
-        <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["abi"]?></a></li>
-        <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["alumni"]?></a></li>
-        <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["coop"]?></a></li>
+        <?php if ($lang == "sv") { //All links in Swedish, only About and Cooperation in English and Finnish ?>
+          <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["about"]?></a></li>
+          <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["member"]?></a></li>
+          <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["abi"]?></a></li>
+          <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["alumni"]?></a></li>
+          <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["coop"]?></a></li>
+        <?php } else { ?>
+          <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["about"]?></a></li>
+          <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["coop"]?></a></li>
+        <?php } ?>
         <li class="mobile-external-links first">
           <a href="#">
             <img src="assets/tf_natside_logon-06.svg">
