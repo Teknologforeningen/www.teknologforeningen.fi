@@ -50,7 +50,12 @@ $translations = array(
   )
 );
 
-$lang = $_GET['lang'];
+if (isset($_GET['lang'])) {
+  $lang = $_GET['lang'];
+} else {
+  $lang = "sv";
+}
+
 if ($lang != "sv" && $lang != "en" && $lang != "fi") {
   $lang = "sv";
 }
