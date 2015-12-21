@@ -1,17 +1,65 @@
 <?php
 
-    ini_set('display_errors', true);
-    error_reporting(E_ALL);
-    date_default_timezone_set('Europe/Helsinki');
-    
-    include_once './TaffaAPI.class.php';
-    
-    $TaffaAPI = new TaffaAPI(@$_GET['lang']);
+ini_set('display_errors', true);
+error_reporting(E_ALL);
+date_default_timezone_set('Europe/Helsinki');
+
+include_once './TaffaAPI.class.php';
+
+$TaffaAPI = new TaffaAPI(@$_GET['lang']);
+
+$translations = array(
+  "sv" => array(
+    "about" => "Om Teknologföreningen",
+    "member" => "Medlemsportal",
+    "abi" => "Arbiturienter",
+    "alumni" => "Alumner",
+    "coop" => "Samarbete",
+    "taffaAB" => "Täffä AB",
+    "taffaAB_desc" => "Beställningsrestaurang",
+    "taffa" => "Täffä",
+    "taffa_desc" => "Lunchrestaurang",
+    "traffpunkt" => "Träffpunkt Aalto",
+    "traffpunkt_desc" => "Visionsprojektet"
+  ),
+  "en" => array(
+    "about" => "About Teknologföreningen",
+    "member" => "",
+    "abi" => "",
+    "alumni" => "",
+    "coop" => "Cooperation",
+    "taffaAB" => "Täffä AB",
+    "taffaAB_desc" => "Catering restaurant",
+    "taffa" => "Täffä",
+    "taffa_desc" => "Lunch restaurant",
+    "traffpunkt" => "Träffpunkt Aalto",
+    "traffpunkt_desc" => "Visionsprojektet?"
+  ),
+  "fi" => array(
+    "about" => "Teknologföreningen",
+    "member" => "",
+    "abi" => "",
+    "alumni" => "",
+    "coop" => "Yhteistyö & rekry",
+    "taffaAB" => "Täffä AB",
+    "taffaAB_desc" => "Tilausravintola",
+    "taffa" => "Täffä",
+    "taffa_desc" => "Lounasravintola",
+    "traffpunkt" => "Träffpunkt Aalto",
+    "traffpunkt_desc" => "Visionsprojektet?"
+  )
+);
+
+$lang = $_GET['lang'];
+if ($lang != "sv" && $lang != "en" && $lang != "fi") {
+  $lang = "sv";
+}
+
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Hej TF</title>
+  <title>Teknologföreningen</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -31,49 +79,43 @@
       <!-- Adds the menu icon without any text-->
       <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
     </ul>
+    <!-- Top bar for mobile -->
     <section class="top-bar-section">
       <ul class="left">
-        <li><a href="#">Om Teknologföreningen</a></li>
-        <li><a href="#">Medlemsportal</a></li>
-        <li><a href="#">Arbiturienter</a></li>
-        <li><a href="#">Alumner</a></li>
-        <li><a href="#">Samarbete</a></li>
-        <li class="mobile-links">
+        <?php if ($lang == "sv") { //All links in Swedish, only About and Cooperation in English and Finnish ?>
+          <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["about"]?></a></li>
+          <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["member"]?></a></li>
+          <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["abi"]?></a></li>
+          <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["alumni"]?></a></li>
+          <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["coop"]?></a></li>
+        <?php } else { ?>
+          <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["about"]?></a></li>
+          <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["coop"]?></a></li>
+        <?php } ?>
+        <li class="mobile-external-links first">
           <a href="#">
-            <div class="row">
-              <div class="small-4 columns">
-                <img src="assets/tf_natside_logon-05.svg" style="height: 64px">
-              </div>
-              <div class="small-8 columns">
-                <h3>Täffä</h3>
-                <span>Lunchrestaurang</span>
-              </div>
+            <img src="assets/tf_natside_logon-06.svg">
+            <div class="link-container">
+              <h3><?php echo $translations[$lang]["taffaAB"]?></h3>
+              <span><?php echo $translations[$lang]["taffaAB_desc"]?></span>
             </div>
           </a>
         </li>
-        <li class="mobile-links">
+        <li class="mobile-external-links">
           <a href="#">
-            <div class="row">
-              <div class="small-4 columns">
-                <img src="assets/tf_natside_logon-06.svg" style="height: 64px">
-              </div>
-              <div class="small-8 columns">
-                <h3>Täffä AB</h3>
-                <span>Beställningsrestaurang</span>
-              </div>
+            <img src="assets/tf_natside_logon-05.svg">
+            <div class="link-container">
+              <h3><?php echo $translations[$lang]["taffaAB"]?></h3>
+              <span><?php echo $translations[$lang]["taffaAB_desc"]?></span>
             </div>
           </a>
         </li>
-        <li class="mobile-links">
+        <li class="mobile-external-links">
           <a href="#">
-            <div class="row">
-              <div class="small-4 columns">
-                <img src="assets/tf_natside_logon-07.svg" style="height: 64px">
-              </div>
-              <div class="small-8 columns">
-                <h3>Träffpunkt Aalto</h3>
-                <span>Fin text hit kom</span>
-              </div>
+            <img src="assets/tf_natside_logon-07.svg">
+            <div class="link-container">
+              <h3><?php echo $translations[$lang]["traffpunkt"]?></h3>
+              <span><?php echo $translations[$lang]["traffpunkt_desc"]?></span>
             </div>
           </a>
         </li>
@@ -81,66 +123,80 @@
     </section>
   </nav>
   <div class="content">
-    <div class="row">
+    <div class="row tf-logo">
       <div class="small-6 small-centered column">
-        <object class="tf-logo" type="image/svg+xml" data="assets/tf_natside_logon-08.svg"></object>
+        <img class="tf-logo" src="assets/tf_natside_logon-04.svg">
+      </div>
+    </div>
+    <div class="row internal-links full-width">
+      <div class="small-12 column">
+        <ul class="page-links-desktop">
+
+          <?php if ($lang == "sv") { //All links in Swedish, only About and Cooperation in English and Finnish ?>
+            <li><a href="#"><?php echo $translations[$lang]["about"]?></a></li>
+            <li><a href="#"><?php echo $translations[$lang]["member"]?></a></li>
+            <li><a href="#"><?php echo $translations[$lang]["abi"]?></a></li>
+            <li><a href="#"><?php echo $translations[$lang]["alumni"]?></a></li>
+            <li><a href="#"><?php echo $translations[$lang]["coop"]?></a></li>
+          <?php } else { ?>
+            <li class="wider-links"><a href="#"><?php echo $translations[$lang]["about"]?></a></li>
+            <li class="wider-links"><a href="#"><?php echo $translations[$lang]["coop"]?></a></li>
+          <?php } ?>
+        </ul>
+      </div>
+    </div>
+    <div class="row external-links">
+      <div class="small-12 large-4 columns">
+        <a href="#">
+          <img src="assets/tf_natside_logon-02.svg" style="height: 64px">
+          <div class="link-container">
+            <h3><?php echo $translations[$lang]["taffaAB"]?></h3><br>
+            <span><?php echo $translations[$lang]["taffaAB_desc"]?></span>
+          </div>
+        </a>
+      </div>
+      <div class="small-12 large-4 columns">
+        <a href="#">
+          <img src="assets/tf_natside_logon-01.svg" style="height: 64px">
+          <div class="link-container">
+            <h3><?php echo $translations[$lang]["taffa"]?></h3><br>
+            <span><?php echo $translations[$lang]["taffaAB"]?></span>
+          </div>
+        </a>
+      </div>
+      <div class="small-12 large-4 columns">
+        <a href="#">
+          <img src="assets/tf_natside_logon-03.svg" style="height: 64px">
+          <div class="link-container">
+            <h3><?php echo $translations[$lang]["traffpunkt"]?></h3><br>
+            <span><?php echo $translations[$lang]["traffpunkt_desc"]?></span>
+          </div>
+        </a>
       </div>
     </div>
     <div class="row">
-      <div class="small-12 small-centered medium-centered column">
+      <div class="todays-menu-container small-12 small-centered large-centered column">
         <div class="todays-menu">
           <?php echo $TaffaAPI->getNextMenu();?>
         </div>
       </div>
     </div>
-    <div class="row external-links">
-      <div class="small-12 medium-4 columns">
-        <a href="#">
-          <div class="row">
-            <div class="small-4 columns">
-              <img src="assets/tf_natside_logon-05.svg" style="height: 64px">
-            </div>
-            <div class="small-8 columns">
-              <h3>Täffä</h3>
-              <span>Lunchrestaurang</span>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="small-12 medium-4 columns">
-        <a href="#">
-          <div class="row">
-            <div class="small-4 columns">
-              <img src="assets/tf_natside_logon-06.svg" style="height: 64px">
-            </div>
-            <div class="small-8 columns">
-              <h3>Täffä AB</h3>
-              <span>Beställningsrestaurang</span>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="small-12 medium-4 columns">
-        <a href="#">
-          <div class="row">
-            <div class="small-4 columns">
-              <img src="assets/tf_natside_logon-07.svg" style="height: 64px">
-            </div>
-            <div class="small-8 columns">
-              <h3>Träffpunkt Aalto</h3>
-              <span>Fin text hit kom</span>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
   </div>
   <footer class="footer">
-    <div class="row full-width">
-    </div>
     <ul>
-      <li><a href="#">Suomeksi</a></li>
-      <li><a href="#">In English</a></li>
+      <?php
+        //Language specific language links
+        if ($lang == "sv") {
+          echo '<li><a href="?lang=fi">Suomeksi</a></li>';
+          echo '<li><a href="?lang=en">In English</a></li>';
+        } else if ($lang == "en") {
+          echo '<li><a href="?lang=sv">På svenska</a></li>';
+          echo '<li><a href="?lang=fi">Suomeksi</a></li>';
+        } else {
+          echo '<li><a href="?lang=sv">På svenska</a></li>';
+          echo '<li><a href="?lang=en">In English</a></li>';
+        }
+       ?>
     </ul>
   </footer>
 

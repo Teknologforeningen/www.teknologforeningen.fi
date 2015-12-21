@@ -28,27 +28,20 @@ a, a:hover {
 }
 
 body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
   font-family: "Montserrat-Light", sans-serif;
   background: url("../assets/tf_natsida.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
 .content {
-  flex: 1;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
 }
 
-nav, footer {
-  flex: none;
-}
-
-/* Hide the links to Täffä, Täffä AB and Träffpunkt Aalto on mobile devices (shown in the hamburger menu instead) */
-@media screen and (max-width: 40em) {
-  .external-links {
-    display: none;
-  }
+.external-links a {
+  display: inline-block;
 }
 
 .external-links .columns {
@@ -56,30 +49,25 @@ nav, footer {
   padding-right: 0;
 }
 
-.external-links .columns {
-  margin-bottom: 10px;
+.external-links img, .mobile-external-links img {
+  float: left;
 }
 
 .external-links h3 {
   margin: 0;
+  display: inline;
 }
 
-h1 {
-  font-family: "Montserrat-Bold", sans-serif;
+.external-links span {
+  font-size: 0.8em;
+  text-transform: none;
 }
 
-object.tf-logo {
-  fill: white;
-  max-height: 270px;
-  margin-bottom: 25px;
-}
 
-/* Hide links in top bar menu on desktop version */
-@media not screen and (max-width: 40em) {
-  li.mobile-links {
-    color: black;
-    display: none;
-  }
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 footer ul {
@@ -91,17 +79,61 @@ footer ul li {
   display: inline;
 }
 
+.full-width {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: initial;
+}
+
 h1 {
-  font-family: "Montserrat-Bold",sans-serif;
-  font-size: 100px;
+  font-family: "Montserrat-Bold", sans-serif;
+}
+
+h3 {
+  color: white;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.link-container {
+  display: inline-block;
+  text-align: left;
+  margin-top: 6px;
+  margin-left: 16px;
+}
+
+img.tf-logo {
+  max-height: 270px;
+}
+
+ul.page-links-desktop {
+  font-size: 0.9em;
+  font-family: "Montserrat-Bold", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.page-links-desktop li {
+  padding: 15px;
+  font-weight: bold;
+  display: inline-block;
+  list-style-type: none;
 }
 
 .todays-menu {
   background-color: white;
-  padding: 5%;
+  padding: 15px 25px 15px 25px;
   border-style: solid;
   border-width: 1px;
   border-color: #222;
+  display: inline-block;
+  text-align: left;
+}
+
+.todays-menu-container {
   text-align: center;
 }
 
@@ -116,13 +148,116 @@ h1 {
   font-weight: 700;
   margin-bottom: 5px;
   text-transform: uppercase;
+  font-size: 0.8em;
 }
 
-/* Mobile version specific properties of the top bar */
-@media screen and (max-width: 40em) {
+.todays-menu li {
+  font-size: 0.8em;
+}
+
+.top-bar-section ul li > a {
+  font-family: "Montserrat-Light", sans-serif;
+  text-transform: uppercase;
+  color: #222;
+}
+
+.top-bar-section ul li > a span {
+  text-transform: none;
+}
+
+.wider-links {
+  width: 300px;
+}
+
+/* General desktop specific properties */
+@media not screen and (max-width: 64.063em) {
+
+  li.mobile-external-links {
+    display: none;
+  }
+
+  .row.tf-logo {
+    margin-bottom: 3em;
+  }
+
+  .row.internal-links {
+    margin-bottom: 2em;
+  }
+
+  .row.external-links {
+    margin-bottom: 2em;
+    text-align: center;
+  }
+
+  /* Increase vertical margin between elements on larger displays */
+  @media screen and (min-height: 900px) {
+    .row.tf-logo {
+      margin-bottom: 5em;
+    }
+
+    .row.internal-links {
+      margin-bottom: 3em;
+    }
+
+    .row.external-links {
+      margin-bottom: 4em;
+    }
+  }
+
+  .top-bar {
+    display: none;
+  }
+}
+
+/* Mobile specific properties */
+@media screen and (max-width: 64.063em) {
 
   .columns {
     padding: 0;
+  }
+
+  .external-links {
+    display: none;
+  }
+
+  .external-links .columns {
+    margin-bottom: 10px;
+  }
+
+  img.tf-logo {
+    margin-bottom: 25px;
+  }
+
+  h3 {
+    color: black;
+  }
+
+  .mobile-external-links {
+    padding: 6px 0 6px 24px;
+  }
+
+  .mobile-external-links.first {
+    padding-top: 20px;
+  }
+
+  .mobile-external-links img {
+    width: 48px;
+    margin-top: 8px;
+  }
+
+  .mobile-internal-links {
+    padding-left: 24px;
+  }
+
+  .row.tf-logo {
+    margin-bottom: 15%
+  }
+
+  /* Smaller margin for iPhone 4 */
+  @media screen and (max-height: 480px) {
+    .row.tf-logo {
+      margin-bottom: 10px;
+    }
   }
 
   /* Colors the hamburger menu when unexpanded */
@@ -140,6 +275,12 @@ h1 {
     background: none;
   }
 
+  .top-bar.expanded {
+    z-index: 10;
+    height: 100%; /* Covers the screen when menu is expanded */
+    background-color: white;
+  }
+
   /* Add a white background to the top bar when the hamburger menu is expanded */
   .top-bar.expanded .title-area {
     background: #fff;
@@ -149,14 +290,9 @@ h1 {
   .top-bar-section ul li {
     background-color: #fff;
   }
-}
 
-.top-bar-section ul li > a {
-  font-family: "Montserrat-Light", sans-serif;
-  text-transform: uppercase;
-  color: #222;
-}
-
-.top-bar-section ul li > a span {
-  text-transform: none;
+  /* Hide page links from mobile version */
+  ul.page-links-desktop {
+    display: none;
+  }
 }
