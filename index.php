@@ -68,6 +68,22 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Favicons generated using http://realfavicongenerator.net highly recommended to use if these change -->
+  <link rel="apple-touch-icon" sizes="57x57" href="ico/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="ico/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="ico/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="ico/apple-touch-icon-76x76.png">
+  <link rel="icon" type="image/png" href="ico/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="ico/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="ico/manifest.json">
+  <link rel="mask-icon" href="ico/safari-pinned-tab.svg" color="#b20738">
+  <link rel="shortcut icon" href="ico/favicon.ico">
+  <meta name="apple-mobile-web-app-title" content="Teknologföreningen">
+  <meta name="application-name" content="Teknologföreningen">
+  <meta name="msapplication-TileColor" content="#b20738">
+  <meta name="msapplication-config" content="ico/browserconfig.xml">
+  <meta name="theme-color" content="#b20738">
+
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/normalize.css">
 
