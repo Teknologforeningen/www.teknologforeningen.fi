@@ -38,6 +38,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   width: 100%;
+  z-index: -10;
 }
 
 .external-links a {
@@ -276,6 +277,7 @@ ul.page-links-desktop {
   }
 
   .top-bar.expanded {
+    display: inline;
     z-index: 10;
     height: 100%; /* Covers the screen when menu is expanded */
     background-color: white;
