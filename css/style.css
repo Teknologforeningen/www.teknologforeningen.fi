@@ -29,9 +29,28 @@ a, a:hover, a:active, a:visited {
 
 body {
   font-family: "Montserrat-Light", sans-serif;
-  background: url("../assets/tf_natsida.jpg") no-repeat center center fixed;
+  background: url("../assets/background-hd.jpg") no-repeat center center fixed;
   background-size: cover;
   min-height: 450px;
+}
+
+/* Different sized backgrounds depending on the screen size */
+@media screen and (min-height: 721px) {
+  body {
+    background-image: url("../assets/background-fhd.jpg");
+  }
+}
+
+@media screen and (min-height: 1081px) {
+  body {
+    background-image: url("../assets/background-qhd.jpg");
+  }
+}
+
+@media screen and (min-height: 1441px) {
+  body {
+    background-image: url("../assets/background-4k.jpg");
+  }
 }
 
 .content {
