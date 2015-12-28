@@ -31,6 +31,7 @@ body {
   font-family: "Montserrat-Light", sans-serif;
   background: url("../assets/tf_natsida.jpg") no-repeat center center fixed;
   background-size: cover;
+  min-height: 450px;
 }
 
 .content {
