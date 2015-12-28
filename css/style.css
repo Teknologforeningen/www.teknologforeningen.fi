@@ -293,6 +293,12 @@ ul.page-links-desktop {
     background-color: #fff;
   }
 
+  /* Override default Foundation colors when clicking on links */
+  .top-bar-section ul li:hover:not(.has-form) > a {
+    background: none;
+    color: black;
+  }
+
   /* Hide page links from mobile version */
   ul.page-links-desktop {
     display: none;
