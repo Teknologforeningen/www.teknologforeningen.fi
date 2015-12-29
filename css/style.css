@@ -22,15 +22,35 @@
   font-style: normal;
 }
 
-a, a:hover {
+a, a:hover, a:active, a:visited {
   color: #fff;
   text-transform: uppercase;
 }
 
 body {
   font-family: "Montserrat-Light", sans-serif;
-  background: url("../assets/tf_natsida.jpg") no-repeat center center fixed;
+  background: url("../assets/background-hd.jpg") no-repeat center center fixed;
   background-size: cover;
+  min-height: 450px;
+}
+
+/* Different sized backgrounds depending on the screen size */
+@media screen and (min-height: 721px) {
+  body {
+    background-image: url("../assets/background-fhd.jpg");
+  }
+}
+
+@media screen and (min-height: 1081px) {
+  body {
+    background-image: url("../assets/background-qhd.jpg");
+  }
+}
+
+@media screen and (min-height: 1441px) {
+  body {
+    background-image: url("../assets/background-4k.jpg");
+  }
 }
 
 .content {
@@ -38,6 +58,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   width: 100%;
+  z-index: -10;
 }
 
 .external-links a {
@@ -276,6 +297,7 @@ ul.page-links-desktop {
   }
 
   .top-bar.expanded {
+    display: inline;
     z-index: 10;
     height: 100%; /* Covers the screen when menu is expanded */
     background-color: white;
@@ -289,6 +311,12 @@ ul.page-links-desktop {
   /* Changes the background of the list items in the top bar*/
   .top-bar-section ul li {
     background-color: #fff;
+  }
+
+  /* Override default Foundation colors when clicking on links */
+  .top-bar-section ul li:hover:not(.has-form) > a {
+    background: none;
+    color: black;
   }
 
   /* Hide page links from mobile version */
