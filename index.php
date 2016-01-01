@@ -110,7 +110,7 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
           <!-- <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["alumni"]?></a></li> -->
           <!-- <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["coop"]?></a></li> -->
         <?php } else { ?>
-          <!-- <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["about"]?></a></li> -->
+          <li class="mobile-internal-links"><a href="https://joomla.teknologforeningen.fi/en/about-teknologfoereningen/presentation/presentation.html"><?php echo $translations[$lang]["about"]?></a></li>
           <!-- <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["coop"]?></a></li> -->
         <?php } ?>
         <li class="mobile-external-links first">
@@ -162,7 +162,7 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
             <!-- <li><a href="#"><?php echo $translations[$lang]["alumni"]?></a></li> -->
             <!-- <li><a href="#"><?php echo $translations[$lang]["coop"]?></a></li> -->
           <?php } else { ?>
-            <!-- <li class="wider-links"><a href="#"><?php echo $translations[$lang]["about"]?></a></li> -->
+            <li class="wider-links"><a href="https://joomla.teknologforeningen.fi/en/about-teknologfoereningen/presentation/presentation.html"><?php echo $translations[$lang]["about"]?></a></li>
             <!-- <li class="wider-links"><a href="#"><?php echo $translations[$lang]["coop"]?></a></li> -->
           <?php } ?>
         </ul>
