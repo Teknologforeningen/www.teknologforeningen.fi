@@ -36,7 +36,7 @@ $translations = array(
     "traffpunkt_desc" => "Vision project"
   ),
   "fi" => array(
-    "about" => "Tietoa Teknologföreningenistä",
+    "about" => "Teknologföreningenistä",
     "member" => "",
     "abi" => "",
     "alumni" => "",
