@@ -33,7 +33,7 @@ $translations = array(
     "taffa" => "Täffä",
     "taffa_desc" => "Lunch restaurant",
     "traffpunkt" => "Träffpunkt Aalto",
-    "traffpunkt_desc" => "Visionsprojektet?"
+    "traffpunkt_desc" => "Vision project"
   ),
   "fi" => array(
     "about" => "Teknologföreningen",
@@ -46,7 +46,7 @@ $translations = array(
     "taffa" => "Täffä",
     "taffa_desc" => "Lounasravintola",
     "traffpunkt" => "Träffpunkt Aalto",
-    "traffpunkt_desc" => "Visionsprojektet?"
+    "traffpunkt_desc" => "Visio-projekti"
   )
 );
 
