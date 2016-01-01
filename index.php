@@ -104,17 +104,17 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
     <section class="top-bar-section">
       <ul class="left">
         <?php if ($lang == "sv") { //All links in Swedish, only About and Cooperation in English and Finnish ?>
-          <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["about"]?></a></li>
-          <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["member"]?></a></li>
-          <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["abi"]?></a></li>
-          <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["alumni"]?></a></li>
-          <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["coop"]?></a></li>
+          <li class="mobile-internal-links"><a href="https://medlem.teknologforeningen.fi/index.php/2-uncategorised/116-om-teknologfoereningen"><?php echo $translations[$lang]["about"]?></a></li>
+          <!-- <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["member"]?></a></li> -->
+          <!-- <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["abi"]?></a></li> -->
+          <!-- <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["alumni"]?></a></li> -->
+          <!-- <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["coop"]?></a></li> -->
         <?php } else { ?>
-          <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["about"]?></a></li>
-          <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["coop"]?></a></li>
+          <!-- <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["about"]?></a></li> -->
+          <!-- <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["coop"]?></a></li> -->
         <?php } ?>
         <li class="mobile-external-links first">
-          <a href="#">
+          <a href="http://taffa.fi/">
             <img src="assets/tf_natside_logon-06.svg">
             <div class="link-container">
               <h3><?php echo $translations[$lang]["taffaAB"]?></h3>
@@ -122,6 +122,7 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
             </div>
           </a>
         </li>
+        <!--
         <li class="mobile-external-links">
           <a href="#">
             <img src="assets/tf_natside_logon-05.svg">
@@ -131,8 +132,9 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
             </div>
           </a>
         </li>
+        -->
         <li class="mobile-external-links">
-          <a href="#">
+          <a href="https://traffpunktaalto.fi/">
             <img src="assets/tf_natside_logon-07.svg">
             <div class="link-container">
               <h3><?php echo $translations[$lang]["traffpunkt"]?></h3>
