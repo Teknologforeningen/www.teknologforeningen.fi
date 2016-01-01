@@ -105,7 +105,7 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
       <ul class="left">
         <?php if ($lang == "sv") { //All links in Swedish, only About and Cooperation in English and Finnish ?>
           <li class="mobile-internal-links"><a href="https://medlem.teknologforeningen.fi/index.php/2-uncategorised/116-om-teknologfoereningen"><?php echo $translations[$lang]["about"]?></a></li>
-          <!-- <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["member"]?></a></li> -->
+          <li class="mobile-internal-links"><a href="https://medlem.teknologforeningen.fi"><?php echo $translations[$lang]["member"]?></a></li>
           <!-- <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["abi"]?></a></li> -->
           <!-- <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["alumni"]?></a></li> -->
           <!-- <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["coop"]?></a></li> -->
@@ -156,8 +156,8 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
         <ul class="page-links-desktop">
 
           <?php if ($lang == "sv") { //All links in Swedish, only About and Cooperation in English and Finnish ?>
-            <li><a href="#"><?php echo $translations[$lang]["about"]?></a></li>
-            <!-- <li><a href="#"><?php echo $translations[$lang]["member"]?></a></li> -->
+            <li><a href="https://medlem.teknologforeningen.fi/index.php/2-uncategorised/116-om-teknologfoereningen"><?php echo $translations[$lang]["about"]?></a></li>
+            <li><a href="https://medlem.teknologforeningen.fi"><?php echo $translations[$lang]["member"]?></a></li>
             <!-- <li><a href="#"><?php echo $translations[$lang]["abi"]?></a></li> -->
             <!-- <li><a href="#"><?php echo $translations[$lang]["alumni"]?></a></li> -->
             <!-- <li><a href="#"><?php echo $translations[$lang]["coop"]?></a></li> -->
