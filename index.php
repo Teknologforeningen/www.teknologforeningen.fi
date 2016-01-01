@@ -168,8 +168,8 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
         </ul>
       </div>
     </div>
-    <div class="row align-center external-links">
-      <div class="small-12 large-4 columns">
+    <div class="row external-links">
+      <div class="small-12 large-4 large-offset-2 columns">
         <a href="http://taffa.fi/">
           <img src="assets/tf_natside_logon-02.svg" style="height: 64px">
           <div class="link-container">
@@ -187,7 +187,7 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
           </div>
         </a>
       </div>-->
-      <div class="small-12 large-4 columns">
+      <div class="small-12 large-4 columns end">
         <a href="https://traffpunktaalto.fi/">
           <img src="assets/tf_natside_logon-03.svg" style="height: 64px">
           <div class="link-container">
