@@ -168,7 +168,7 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
         </ul>
       </div>
     </div>
-    <div class="row external-links">
+    <div class="row align-center external-links">
       <div class="small-12 large-4 columns">
         <a href="http://taffa.fi/">
           <img src="assets/tf_natside_logon-02.svg" style="height: 64px">
