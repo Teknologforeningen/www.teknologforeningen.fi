@@ -296,9 +296,10 @@ ul.page-links-desktop {
   }
 
   .top-bar.expanded {
-    display: inline;
+    display: inline-block;
     z-index: 10;
     height: 100%; /* Covers the screen when menu is expanded */
+    width: 100%;
     background-color: white;
   }
 
