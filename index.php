@@ -157,20 +157,20 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
 
           <?php if ($lang == "sv") { //All links in Swedish, only About and Cooperation in English and Finnish ?>
             <li><a href="#"><?php echo $translations[$lang]["about"]?></a></li>
-            <li><a href="#"><?php echo $translations[$lang]["member"]?></a></li>
-            <li><a href="#"><?php echo $translations[$lang]["abi"]?></a></li>
-            <li><a href="#"><?php echo $translations[$lang]["alumni"]?></a></li>
-            <li><a href="#"><?php echo $translations[$lang]["coop"]?></a></li>
+            <!-- <li><a href="#"><?php echo $translations[$lang]["member"]?></a></li> -->
+            <!-- <li><a href="#"><?php echo $translations[$lang]["abi"]?></a></li> -->
+            <!-- <li><a href="#"><?php echo $translations[$lang]["alumni"]?></a></li> -->
+            <!-- <li><a href="#"><?php echo $translations[$lang]["coop"]?></a></li> -->
           <?php } else { ?>
-            <li class="wider-links"><a href="#"><?php echo $translations[$lang]["about"]?></a></li>
-            <li class="wider-links"><a href="#"><?php echo $translations[$lang]["coop"]?></a></li>
+            <!-- <li class="wider-links"><a href="#"><?php echo $translations[$lang]["about"]?></a></li> -->
+            <!-- <li class="wider-links"><a href="#"><?php echo $translations[$lang]["coop"]?></a></li> -->
           <?php } ?>
         </ul>
       </div>
     </div>
     <div class="row external-links">
       <div class="small-12 large-4 columns">
-        <a href="#">
+        <a href="http://taffa.fi/">
           <img src="assets/tf_natside_logon-02.svg" style="height: 64px">
           <div class="link-container">
             <h3><?php echo $translations[$lang]["taffaAB"]?></h3><br>
@@ -178,7 +178,7 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
           </div>
         </a>
       </div>
-      <div class="small-12 large-4 columns">
+      <!--<div class="small-12 large-4 columns">
         <a href="#">
           <img src="assets/tf_natside_logon-01.svg" style="height: 64px">
           <div class="link-container">
@@ -186,9 +186,9 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
             <span><?php echo $translations[$lang]["taffaAB"]?></span>
           </div>
         </a>
-      </div>
+      </div>-->
       <div class="small-12 large-4 columns">
-        <a href="#">
+        <a href="https://traffpunktaalto.fi/">
           <img src="assets/tf_natside_logon-03.svg" style="height: 64px">
           <div class="link-container">
             <h3><?php echo $translations[$lang]["traffpunkt"]?></h3><br>
