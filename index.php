@@ -104,16 +104,16 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
     <section class="top-bar-section">
       <ul class="left">
         <?php if ($lang == "sv") { //All links in Swedish, only About and Cooperation in English and Finnish ?>
-          <li class="mobile-internal-links"><a href="https://joomla.teknologforeningen.fi/sv/om-teknologfoereningen/presentation/presentation.html"><?php echo $translations[$lang]["about"]?></a></li>
+          <li class="mobile-internal-links"><a href="https://about.teknologforeningen.fi/index.php/sv/"><?php echo $translations[$lang]["about"]?></a></li>
           <li class="mobile-internal-links"><a href="https://medlem.teknologforeningen.fi"><?php echo $translations[$lang]["member"]?></a></li>
           <!-- <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["abi"]?></a></li> -->
           <!-- <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["alumni"]?></a></li> -->
           <!-- <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["coop"]?></a></li> -->
         <?php } else if ($lang == "en"){ ?>
-          <li class="mobile-internal-links"><a href="https://joomla.teknologforeningen.fi/en/about-teknologfoereningen/presentation/presentation.html"><?php echo $translations[$lang]["about"]?></a></li>
+          <li class="mobile-internal-links"><a href="https://about.teknologforeningen.fi/index.php/en/"><?php echo $translations[$lang]["about"]?></a></li>
           <!-- <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["coop"]?></a></li> -->
         <?php } else { ?>
-          <li class="mobile-internal-links"><a href="https://joomla.teknologforeningen.fi/fi/teknologfoereningen/presentation/presentation.html"><?php echo $translations[$lang]["about"]?></a></li>
+          <li class="mobile-internal-links"><a href="https://about.teknologforeningen.fi/index.php/fi/"><?php echo $translations[$lang]["about"]?></a></li>
           <!-- <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["coop"]?></a></li> -->
         <?php } ?>
         <li class="mobile-external-links first">
@@ -159,16 +159,16 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
         <ul class="page-links-desktop">
 
           <?php if ($lang == "sv") { //All links in Swedish, only About and Cooperation in English and Finnish ?>
-            <li><a href="https://joomla.teknologforeningen.fi/sv/om-teknologfoereningen/presentation/presentation.html"><?php echo $translations[$lang]["about"]?></a></li>
+            <li><a href="https://about.teknologforeningen.fi/index.php/sv/"><?php echo $translations[$lang]["about"]?></a></li>
             <li><a href="https://medlem.teknologforeningen.fi"><?php echo $translations[$lang]["member"]?></a></li>
             <!-- <li><a href="#"><?php echo $translations[$lang]["abi"]?></a></li> -->
             <!-- <li><a href="#"><?php echo $translations[$lang]["alumni"]?></a></li> -->
             <!-- <li><a href="#"><?php echo $translations[$lang]["coop"]?></a></li> -->
           <?php } else if ($lang == "en"){ ?>
-            <li class="wider-links"><a href="https://joomla.teknologforeningen.fi/en/about-teknologfoereningen/presentation/presentation.html"><?php echo $translations[$lang]["about"]?></a></li>
+            <li class="wider-links"><a href="https://about.teknologforeningen.fi/index.php/en/"><?php echo $translations[$lang]["about"]?></a></li>
             <!-- <li class="wider-links"><a href="#"><?php echo $translations[$lang]["coop"]?></a></li> -->
           <?php } else { ?>
-            <li class="wider-links"><a href="https://joomla.teknologforeningen.fi/fi/teknologfoereningen/presentation/presentation.html"><?php echo $translations[$lang]["about"]?></a></li>
+            <li class="wider-links"><a href="https://about.teknologforeningen.fi/index.php/fi/"><?php echo $translations[$lang]["about"]?></a></li>
             <!-- <li class="wider-links"><a href="#"><?php echo $translations[$lang]["coop"]?></a></li> -->
           <?php } ?>
         </ul>
