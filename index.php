@@ -203,31 +203,31 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
         </a>
       </div>
     </div>
-    <div class="row">
+    <div class="row menu">
       <div class="todays-menu-container small-12 small-centered large-centered column">
         <div class="todays-menu">
           <?php echo $TaffaAPI->getNextMenu();?>
         </div>
       </div>
     </div>
+    <footer class="footer">
+      <ul class="no-margin">
+        <?php
+          //Language specific language links
+          if ($lang == "sv") {
+            echo '<li><a href="?lang=fi">Suomeksi</a></li>';
+            echo '<li><a href="?lang=en">In English</a></li>';
+          } else if ($lang == "en") {
+            echo '<li><a href="?lang=sv">På svenska</a></li>';
+            echo '<li><a href="?lang=fi">Suomeksi</a></li>';
+          } else {
+            echo '<li><a href="?lang=sv">På svenska</a></li>';
+            echo '<li><a href="?lang=en">In English</a></li>';
+          }
+         ?>
+      </ul>
+    </footer>
   </div>
-  <footer class="footer">
-    <ul>
-      <?php
-        //Language specific language links
-        if ($lang == "sv") {
-          echo '<li><a href="?lang=fi">Suomeksi</a></li>';
-          echo '<li><a href="?lang=en">In English</a></li>';
-        } else if ($lang == "en") {
-          echo '<li><a href="?lang=sv">På svenska</a></li>';
-          echo '<li><a href="?lang=fi">Suomeksi</a></li>';
-        } else {
-          echo '<li><a href="?lang=sv">På svenska</a></li>';
-          echo '<li><a href="?lang=en">In English</a></li>';
-        }
-       ?>
-    </ul>
-  </footer>
 
   <script src="js/jquery.js"></script>
   <script src="js/foundation.min.js"></script>

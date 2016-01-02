@@ -31,7 +31,6 @@ body {
   font-family: "Montserrat-Light", sans-serif;
   background: url("../assets/background-hd.jpg") no-repeat center center fixed;
   background-size: cover;
-  min-height: 450px;
 }
 
 /* Different sized backgrounds depending on the screen size */
@@ -83,13 +82,6 @@ body {
   text-transform: none;
 }
 
-
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
 footer ul {
   text-align: center;
 }
@@ -126,6 +118,10 @@ h3 {
 
 img.tf-logo {
   max-height: 270px;
+}
+
+.no-margin {
+  margin: 0;
 }
 
 ul.page-links-desktop {
@@ -192,6 +188,10 @@ ul.page-links-desktop {
 /* General desktop specific properties */
 @media not screen and (max-width: 64.063em) {
 
+  body {
+    min-height: 660px;
+  }
+
   li.mobile-external-links {
     display: none;
   }
@@ -209,6 +209,40 @@ ul.page-links-desktop {
     text-align: center;
   }
 
+  .row.menu {
+    margin-bottom: 2em;
+  }
+
+  /* Reduce vertical margin between elements on smaller displays */
+  @media screen and (max-height: 740px) {
+
+    /* Don't attempt to center the content if the height of the content is larger than the viewport height */
+    @media screen and (max-height: 660px) {
+      .content {
+        top: 0;
+        transform: none;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .row.tf-logo {
+      margin-bottom: 1em;
+    }
+
+    .row.internal-links {
+      margin-bottom: 0.5em;
+    }
+
+    .row.external-links {
+      margin-bottom: 0.5em;
+    }
+
+    .row.menu {
+      margin-bottom: 1em;
+    }
+  }
+
   /* Increase vertical margin between elements on larger displays */
   @media screen and (min-height: 900px) {
     .row.tf-logo {
@@ -222,6 +256,10 @@ ul.page-links-desktop {
     .row.external-links {
       margin-bottom: 4em;
     }
+
+    .row.menu {
+      margin-bottom: 5em;
+    }
   }
 
   .top-bar {
@@ -231,6 +269,10 @@ ul.page-links-desktop {
 
 /* Mobile specific properties */
 @media screen and (max-width: 64.063em) {
+
+  body {
+    min-height: 450px;
+  }
 
   .columns {
     padding: 0;
