@@ -66,6 +66,15 @@ class taffaAPI
     }
     
     /**
+     * Gets all foods from today +5 days
+     * @return string a HTML string of the foods comming in the next five days.
+     */
+    public function getWeek()
+    {
+        return $this->get('html/week');
+    }
+    
+    /**
      * Gets yesterdays food.
      * @return string a HTML string of yesterdays food
      * @todo Implement.
