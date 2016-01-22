@@ -21,7 +21,9 @@ $translations = array(
     "taffa_desc" => "Lunchrestaurang",
     "taffa_url" => "https://about.teknologforeningen.fi/index.php/sv/dagsrestaurangen",
     "traffpunkt" => "Träffpunkt Aalto",
-    "traffpunkt_desc" => "Visionsprojektet"
+    "traffpunkt_desc" => "Visionsprojektet",
+    "mon-thu" => "Må - To",
+    "fri" => "Fr"
   ),
   "en" => array(
     "about" => "About Teknologföreningen",
@@ -35,7 +37,9 @@ $translations = array(
     "taffa_desc" => "Lunch restaurant",
     "taffa_url" => "https://about.teknologforeningen.fi/index.php/en/lunch-restaurant",
     "traffpunkt" => "Träffpunkt Aalto",
-    "traffpunkt_desc" => "Vision project"
+    "traffpunkt_desc" => "Vision project",
+    "mon-thu" => "Mo - Thu",
+    "fri" => "Fri"
   ),
   "fi" => array(
     "about" => "Teknologföreningenistä",
@@ -49,7 +53,9 @@ $translations = array(
     "taffa_desc" => "Lounasravintola",
     "taffa_url" => "https://about.teknologforeningen.fi/index.php/fi/teekkariravintola",
     "traffpunkt" => "Träffpunkt Aalto",
-    "traffpunkt_desc" => "Visio-projekti"
+    "traffpunkt_desc" => "Visio-projekti",
+    "mon-thu" => "Ma - To",
+    "fri" => "Pe"
   )
 );
 
@@ -213,6 +219,18 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
             <?php echo $TaffaAPI->getNextMenu(2);?>
             <?php echo $TaffaAPI->getNextMenu(3);?>
             <?php echo $TaffaAPI->getNextMenu(4);?>
+          </div>
+          <div id="hours">
+            <table>
+              <tr>
+                <td><?php echo $translations[$lang]["mon-thu"]?></td>
+                <td>10:30 - 16:00</td>
+              </tr>
+              <tr>
+                <td><?php echo $translations[$lang]["fri"]?></td>
+                <td>10:30 - 15:00</td>
+              </tr>
+            </table>
           </div>
         </div>
       </div>
