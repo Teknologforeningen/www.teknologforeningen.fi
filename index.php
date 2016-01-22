@@ -218,7 +218,7 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
       </div>
     </div>
     <footer class="footer">
-      <ul class="no-margin">
+      <ul>
         <?php
           //Language specific language links
           if ($lang == "sv") {
