@@ -114,15 +114,16 @@ class taffaAPI
      * @return string a HTML string of todays food, or tomorrows, depending
      * on if the restaurant has closed today.
      */
-    public function getNextMenu()
+    public function getNextMenu($days=0)
     {
         if(
             (int)date('G') >= TAFAPI_MON_THU_CLOSE_H && (int)date('N') < 5 // Post 16 on mon-thu
             || (int)date('G') >= TAFAPI_FRI_CLOSE_H && (int)date('N') == 5 // Post 15 on fri
-        )
-            return $this->getTomorrow();
-        else
-            return $this->getToday ();
+        ) {
+            $days=$days + 1;
+        }
+
+        return $this->get('html/'.$days);
     }
     
     /**
@@ -133,7 +134,7 @@ class taffaAPI
     {
         return $this->get('html/1');
     }
-    
+
     /**
      * Gets day n:s food. n being an integer from 1-7 => 1 is Monday and 7 is
      * sunday.
@@ -179,9 +180,9 @@ class taffaAPI
     {
         $i18n = Array
             (
-                'fi' => 'Tietoa ei saatavilla!',
-                'sv' => 'Information ej tillgänglig!',
-                'en' => 'Information unavailable!'
+                'fi' => '<small>Tietoa ei saatavilla!</small>',
+                'sv' => '<small>Information ej tillgänglig!</small>',
+                'en' => '<small>Information unavailable</small>!'
             );
         $urlToGet = $this->apiBaseURL . $this->curLang . "/" . $url;
         $httpResponseCode = $this->getHttpRequestCode($urlToGet);

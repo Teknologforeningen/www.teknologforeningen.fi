@@ -208,6 +208,12 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
       <div class="todays-menu-container small-12 small-centered large-centered column">
         <div class="todays-menu">
           <?php echo $TaffaAPI->getNextMenu();?>
+          <div id="week" class="hidden">
+            <?php echo $TaffaAPI->getNextMenu(1);?>
+            <?php echo $TaffaAPI->getNextMenu(2);?>
+            <?php echo $TaffaAPI->getNextMenu(3);?>
+            <?php echo $TaffaAPI->getNextMenu(4);?>
+          </div>
         </div>
       </div>
     </div>
@@ -232,6 +238,7 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
 
   <script src="js/jquery.js"></script>
   <script src="js/foundation.min.js"></script>
+  <script src="js/scripts.js"></script>
   <script>
   $(document).foundation();
   </script>

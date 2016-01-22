@@ -53,9 +53,7 @@ body {
 }
 
 .content {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  margin-top: 1em;
   width: 100%;
 }
 
@@ -147,6 +145,7 @@ ul.page-links-desktop {
   border-color: #222;
   display: inline-block;
   text-align: left;
+  margin-bottom: 2em;
 }
 
 .todays-menu-container {
@@ -156,7 +155,7 @@ ul.page-links-desktop {
 .todays-menu ul {
   list-style: none;
   margin-left: 0;
-  margin-bottom: 0;
+  margin-bottom: 1em;
 }
 
 .todays-menu p {
@@ -169,6 +168,10 @@ ul.page-links-desktop {
 
 .todays-menu li {
   font-size: 0.8em;
+}
+
+.todays-menu div.hidden {
+  display: none;
 }
 
 .top-bar-section ul li > a {
