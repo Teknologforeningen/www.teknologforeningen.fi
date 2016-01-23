@@ -1,7 +1,55 @@
 # www.teknologforeningen.fi
 Landing page for www.teknologforeningen.fi
 
+## Production
+
+### Updating
+
+To update the site you should pull the latest changes from git using the `www-data` user. This can be done with the following command:
+```
+sudo -u www-data git pull --ff-only
+```
+
+If this command fails it means someone has made changes on the server and you should seek out that person and spank them.
+
+### Installation
+
+To run this in production you need to set up a webserver like Apache. Once that is set-up you should clone the repository into the `/var/www` folder. Make sure to set the ownership of the folder to `www-data` in order to allow the webserver user to access it.
+
 ## Development setup
+
+### Docker (recommended way)
+
+[Install Docker](https://docs.docker.com/)
+
+The following command will start a Docker container listening on port 8000. Make sure to replace the path with the path to the project.
+
+```
+docker run -t -i -p 8000:80 -v <path_to_project>:/var/www "eriksencosta/php-dev:latest" /bin/bash
+```
+
+Once the container is running you need to start the webserver:
+```
+webserver start
+```
+
+The site should now be available at http://localhost:8000 (or at the IP of the virtual machine running Docker if you're using Windows/Mac).
+
+To exit the container use: `exit`.
+
+Here is an example of what this might look like:
+
+```
+$ docker run -t -i -p 8000:80 -v ~/Projects/www.teknologforeningen.fi:/var/www "eriksencosta/php-dev:latest" /bin/bash
+root@a0c39ad37ba9:/# webserver start
+Starting PHP-FPM (PHP version 5.6.6) server.
+Starting Nginx server.
+Done.
+root@a0c39ad37ba9:/# exit
+exit
+```
+
+For more information look here: https://hub.docker.com/r/eriksencosta/php-dev/
 
 ### Otto on any platform
 
@@ -13,9 +61,9 @@ Landing page for www.teknologforeningen.fi
 6. Allow otto to install all of its dependencies
 7. Make a note of the IP that the virtual machine is running on.
 8. Log in to the virtual machine with `otto dev ssh` 
-	8b. Windows: Use Putty (or similar) to connect.
-	8c. Write the IP in the Host Name field. Press enter.
-	8d. Login: "vagrant" PW: "vagrant"
+    8b. Windows: Use Putty (or similar) to connect.
+    8c. Write the IP in the Host Name field. Press enter.
+    8d. Login: "vagrant" PW: "vagrant"
 9. Run the PHP server with: `php -S 0.0.0.0:5000`
 10. The server is now running on port 5000 on the IP printed out in step 5
 
@@ -49,7 +97,7 @@ Alternatively, install XAMPP/MAMP locally:
 5. chmod o+x /väg/till/din/mapp/
 6. Fungerar kanske? Om inte så hjälper StackExchange.
 
-### TÄFFÄ API
+## TÄFFÄ API
 
 TäffäAPI or as it is referred to in code, TaffaAPI is a class for easy
 access to the taffa API located at http://api.teknolog.fi/taffa/
