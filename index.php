@@ -251,6 +251,12 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
           }
          ?>
       </ul>
+      <p>
+        Teknologföreningens nationsföretag
+      </p>
+      <a href="http://www.aktia.fi/sv/"><img src="assets/aktia_esbo_hagalund.png" width="100px"></a>
+      <a href="http://www.elisa.fi/"><img src="assets/elisa.png" width="100px"></a>
+      <a href="http://www.walki.com/"><img src="assets/walki.png" width="100px"></a>
     </footer>
   </div>
 

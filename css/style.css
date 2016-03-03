@@ -80,6 +80,11 @@ body {
   text-transform: none;
 }
 
+footer {
+  margin: auto;
+  text-align: center;
+}
+
 footer ul {
   text-align: center;
 }
@@ -87,6 +92,17 @@ footer ul {
 footer ul li {
   padding: 5px;
   display: inline;
+}
+
+footer p {
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: white;
+}
+
+footer img {
+  margin: 15px 30px 40px 30px;
 }
 
 .full-width {
