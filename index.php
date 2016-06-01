@@ -225,12 +225,14 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
               <tr>
                 <td><?php echo $translations[$lang]["mon-thu"]?></td>
                 <!--<td>10:30 - 16:00</td>-->
-                <td><?php echo TAFAPI_MON_THU_OPEN_H.':'.TAFAPI_MON_THU_OPEN_MIN. ' - ' .TAFAPI_MON_THU_CLOSE_H.':'.TAFAPI_MON_THU_CLOSE_MIN; ?></td>
+                <td><?php echo str_pad(TAFAPI_MON_THU_OPEN_H, 2, '0', STR_PAD_LEFT).':'.str_pad(TAFAPI_MON_THU_OPEN_MIN, 2, '0', STR_PAD_LEFT)
+                        . ' - ' .str_pad(TAFAPI_MON_THU_CLOSE_H, 2, '0', STR_PAD_LEFT).':'.str_pad(TAFAPI_MON_THU_CLOSE_MIN, 2, '0', STR_PAD_LEFT); ?></td>
               </tr>
               <tr>
                 <td><?php echo $translations[$lang]["fri"]?></td>
                 <!--<td>10:30 - 15:00</td>-->
-                <td><?php echo TAFAPI_FRI_OPEN_H.':'.TAFAPI_FRI_OPEN_MIN. ' - ' .TAFAPI_FRI_CLOSE_H.':'.TAFAPI_FRI_CLOSE_MIN; ?></td>
+                <td><?php echo str_pad(TAFAPI_FRI_OPEN_H, 2, '0', STR_PAD_LEFT) .':'.str_pad(TAFAPI_FRI_OPEN_MIN, 2, '0', STR_PAD_LEFT). ' - ' 
+                        .str_pad(TAFAPI_FRI_CLOSE_H, 2, '0', STR_PAD_LEFT).':'.str_pad(TAFAPI_FRI_CLOSE_MIN, 2, '0', STR_PAD_LEFT); ?></td>
               </tr>
             </table>
           </div>
