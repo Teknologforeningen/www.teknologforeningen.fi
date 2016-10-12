@@ -31,6 +31,7 @@ body {
   font-family: "Montserrat-Light", sans-serif;
   background: url("../assets/background-hd.jpg") no-repeat center center fixed;
   background-size: cover;
+  height: 100vh;
 }
 
 /* Different sized backgrounds depending on the screen size */
