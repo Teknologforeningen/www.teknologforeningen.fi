@@ -1,18 +1,31 @@
 <?php
 // Business hours
+define('SEASON_WINTER', 0);
+define('SEASON_SUMMER', 1);
+
+define('CUR_SEASON', SEASON_WINTER);
+
 // Mon-Thu
 define('TAFAPI_MON_THU_OPEN_H', 10);
 define('TAFAPI_MON_THU_OPEN_MIN', 30);
-#define('TAFAPI_MON_THU_CLOSE_H', 16);
-define('TAFAPI_MON_THU_CLOSE_H', 15);
+if(CUR_SEASON === SEASON_WINTER)
+    define('TAFAPI_MON_THU_CLOSE_H', 16);
+else
+    define('TAFAPI_MON_THU_CLOSE_H', 15);
 define('TAFAPI_MON_THU_CLOSE_MIN', 0);
 // Fri
 define('TAFAPI_FRI_OPEN_H', 10);
 define('TAFAPI_FRI_OPEN_MIN', 30);
-#define('TAFAPI_FRI_CLOSE_H', 15);
-#define('TAFAPI_FRI_CLOSE_MIN', 0);
-define('TAFAPI_FRI_CLOSE_H', 14);
-define('TAFAPI_FRI_CLOSE_MIN', 30);
+if(CUR_SEASON === SEASON_WINTER)
+{
+    define('TAFAPI_FRI_CLOSE_H', 15);
+    define('TAFAPI_FRI_CLOSE_MIN', 0);
+}
+else
+{
+    define('TAFAPI_FRI_CLOSE_H', 14);
+    define('TAFAPI_FRI_CLOSE_MIN', 30);
+}
 // Sat-Sun
 define('TAFAPI_SAT_SUN_OPEN_H', 0);
 define('TAFAPI_SAT_SUN_OPEN_MIN', 0);
