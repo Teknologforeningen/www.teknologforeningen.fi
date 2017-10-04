@@ -260,7 +260,7 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
       </p>
       <a href="http://www.aktia.fi/sv/"><img alt="Aktia" src="assets/aktia.png" width="100px"></a>
       <a href="http://www.walki.com/"><img alt="Walki" src="assets/walki.png" width="100px"></a>
-      <a href="https://dreambroker.com/"><img alt="Dreambroker" src="assets/dreambroker_onlylogo.png" width="100px"></a>
+      <a href="https://tech.dreambroker.jobs/"><img alt="Dreambroker" src="assets/dreambroker.png" width="100px"></a>
     </footer>
   </div>
 
