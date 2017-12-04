@@ -143,15 +143,6 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
             </div>
           </a>
         </li>
-        <li class="mobile-external-links">
-          <a href="https://traffpunktaalto.fi/">
-            <img src="assets/tf_natside_logon-07.svg">
-            <div class="link-container">
-              <h3><?php echo $translations[$lang]["traffpunkt"]?></h3>
-              <span><?php echo $translations[$lang]["traffpunkt_desc"]?></span>
-            </div>
-          </a>
-        </li>
       </ul>
     </section>
   </nav>
