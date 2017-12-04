@@ -20,8 +20,6 @@ $translations = array(
     "taffa" => "Täffä",
     "taffa_desc" => "Lunchrestaurang",
     "taffa_url" => "https://about.teknologforeningen.fi/index.php/sv/dagsrestaurangen",
-    "traffpunkt" => "Träffpunkt Aalto",
-    "traffpunkt_desc" => "Visionsprojektet",
     "mon-thu" => "Mån - Tors",
     "fri" => "Fre"
   ),
@@ -36,8 +34,6 @@ $translations = array(
     "taffa" => "Täffä",
     "taffa_desc" => "Lunch restaurant",
     "taffa_url" => "https://about.teknologforeningen.fi/index.php/en/lunch-restaurant",
-    "traffpunkt" => "Träffpunkt Aalto",
-    "traffpunkt_desc" => "Vision project",
     "mon-thu" => "Mon - Thu",
     "fri" => "Fri"
   ),
@@ -52,8 +48,6 @@ $translations = array(
     "taffa" => "Täffä",
     "taffa_desc" => "Lounasravintola",
     "taffa_url" => "https://about.teknologforeningen.fi/index.php/fi/teekkariravintola",
-    "traffpunkt" => "Träffpunkt Aalto",
-    "traffpunkt_desc" => "Visio-projekti",
     "mon-thu" => "Ma - To",
     "fri" => "Pe"
   )
@@ -173,7 +167,7 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
       </div>
     </div>
     <div class="row external-links">
-      <div class="small-12 large-4 columns">
+      <div class="small-12 large-4 large-offset-2 columns">
         <a href="http://taffa.fi/">
           <img src="assets/tf_natside_logon-02.svg" style="height: 64px">
           <div class="link-container">
@@ -182,21 +176,12 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
           </div>
         </a>
       </div>
-      <div class="small-12 large-4 columns">
+      <div class="small-12 large-4 end columns">
         <a href="<?php echo $translations[$lang]["taffa_url"]?>">
           <img src="assets/tf_natside_logon-01.svg" style="height: 64px">
           <div class="link-container">
             <h3><?php echo $translations[$lang]["taffa"]?></h3><br>
             <span><?php echo $translations[$lang]["taffa_desc"]?></span>
-          </div>
-        </a>
-      </div>
-      <div class="small-12 large-4 columns end">
-        <a href="https://traffpunktaalto.fi/">
-          <img src="assets/tf_natside_logon-03.svg" style="height: 64px">
-          <div class="link-container">
-            <h3><?php echo $translations[$lang]["traffpunkt"]?></h3><br>
-            <span><?php echo $translations[$lang]["traffpunkt_desc"]?></span>
           </div>
         </a>
       </div>
