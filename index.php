@@ -261,7 +261,7 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
       <a href="http://www.aktia.fi/sv/"><img alt="Aktia" src="assets/aktia.png" width="100px"></a>
       <a href="http://www.walki.com/"><img alt="Walki" src="assets/walki.png" width="100px"></a>
       <a href="https://tech.dreambroker.jobs/"><img alt="Dreambroker" src="assets/dreambroker.png" width="100px"></a>
-      <a href="/think-cell"><img alt="think-cell" src="assets/think-cell.png" width="100px"></a>
+      <a href="/think-cell"><img alt="think-cell" src="assets/think-cell-logo_white.png" width="100px"></a>
     </footer>
   </div>
 
