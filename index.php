@@ -238,6 +238,7 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
       <a href="http://www.walki.com/"><img alt="Walki" src="assets/walki.png" width="100px"></a>
       <a href="https://tech.dreambroker.jobs/"><img alt="Dreambroker" src="assets/dreambroker.png" width="100px"></a>
       <a href="/think-cell"><img alt="think-cell" src="assets/think-cell-logo_white.png" width="100px"></a>
+      <a href="https://www.relexsolutions.com/"><img alt="Relex" src="assets/relex.png" width="100px"></a>
     </footer>
   </div>
 
