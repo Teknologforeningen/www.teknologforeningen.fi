@@ -239,6 +239,7 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
       <a href="https://tech.dreambroker.jobs/"><img alt="Dreambroker" src="assets/dreambroker.png" width="100px"></a>
       <a href="/think-cell"><img alt="think-cell" src="assets/think-cell-logo_white.png" width="100px"></a>
       <a href="https://www.relexsolutions.com/"><img alt="Relex" src="assets/relex.png" width="100px"></a>
+      <a href="https://skogul.fi/<?php echo in_array($lang, ['fi', 'sv']) ? $lang : ''; ?>"><img alt="Skøgul" src="assets/skogul-logo.svg" width="100px"></a>
     </footer>
   </div>
 
