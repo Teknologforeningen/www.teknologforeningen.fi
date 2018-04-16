@@ -21,7 +21,9 @@ $translations = array(
     "taffa_desc" => "Lunchrestaurang",
     "taffa_url" => "https://about.teknologforeningen.fi/index.php/sv/dagsrestaurangen",
     "mon-thu" => "Mån - Tors",
-    "fri" => "Fre"
+    "fri" => "Fre",
+    "skogul" => "Sk&oslash;gul",
+    "skogul_desc" => "Kvarterskrog"
   ),
   "en" => array(
     "about" => "About Teknologföreningen",
@@ -35,7 +37,9 @@ $translations = array(
     "taffa_desc" => "Lunch restaurant",
     "taffa_url" => "https://about.teknologforeningen.fi/index.php/en/lunch-restaurant",
     "mon-thu" => "Mon - Thu",
-    "fri" => "Fri"
+    "fri" => "Fri",
+    "skogul" => "Sk&oslash;gul",
+    "skogul_desc" => "Restaurant"
   ),
   "fi" => array(
     "about" => "Teknologföreningenistä",
@@ -49,7 +53,9 @@ $translations = array(
     "taffa_desc" => "Lounasravintola",
     "taffa_url" => "https://about.teknologforeningen.fi/index.php/fi/teekkariravintola",
     "mon-thu" => "Ma - To",
-    "fri" => "Pe"
+    "fri" => "Pe",
+    "skogul" => "Sk&oslash;gul",
+    "skogul_desc" => "Kortteliravintola"
   )
 );
 
@@ -129,6 +135,15 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
           </a>
         </li>
         <li class="mobile-external-links">
+          <a href="https://skogul.fi/<?php echo in_array($lang, ['fi', 'sv']) ? $lang : ''; ?>">
+            <img alt="Skøgul" src="assets/skogul-icon-black.svg">
+            <div class="link-container">
+              <h3><?php echo $translations[$lang]["skogul"]?></h3>
+              <span><?php echo $translations[$lang]["skogul_desc"]?></span>
+            </div>
+          </a>
+        </li>
+        <li class="mobile-external-links">
         <a href="<?php echo $translations[$lang]["taffa_url"]?>">
             <img src="assets/tf_natside_logon-05.svg">
             <div class="link-container">
@@ -167,12 +182,21 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
       </div>
     </div>
     <div class="row external-links">
-      <div class="small-12 large-4 large-offset-2 columns">
+      <div class="small-12 large-3 large-offset-1 columns">
         <a href="http://taffa.fi/">
           <img src="assets/tf_natside_logon-02.svg" style="height: 64px">
           <div class="link-container">
             <h3><?php echo $translations[$lang]["taffaAB"]?></h3><br>
             <span><?php echo $translations[$lang]["taffaAB_desc"]?></span>
+          </div>
+        </a>
+      </div>
+      <div class="small-12 large-4 columns">
+        <a href="https://skogul.fi/<?php echo in_array($lang, ['fi', 'sv']) ? $lang : ''; ?>">
+          <img src="assets/skogul-icon-white.svg" style="height: 64px">
+          <div class="link-container">
+            <h3><?php echo $translations[$lang]["skogul"]?></h3><br>
+            <span><?php echo $translations[$lang]["skogul_desc"]?></span>
           </div>
         </a>
       </div>
