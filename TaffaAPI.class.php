@@ -23,8 +23,8 @@ if(CUR_SEASON === SEASON_WINTER)
 }
 else
 {
-    define('TAFAPI_FRI_CLOSE_H', 14);
-    define('TAFAPI_FRI_CLOSE_MIN', 30);
+    define('TAFAPI_FRI_CLOSE_H', 15);
+    define('TAFAPI_FRI_CLOSE_MIN', 0);
 }
 // Sat-Sun
 define('TAFAPI_SAT_SUN_OPEN_H', 0);
