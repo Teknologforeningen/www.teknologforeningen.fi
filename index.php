@@ -245,7 +245,7 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
           //Language specific language links
           if ($lang == "sv") {
             echo '<li><a href="?lang=fi">Suomeksi</a></li>';
-            echo "string"; '<li><a href="?lang=en">In English</a></li>';
+            echo '<li><a href="?lang=en">In English</a></li>';
           } else if ($lang == "en") {
             echo '<li><a href="?lang=sv">På svenska</a></li>';
             echo '<li><a href="?lang=fi">Suomeksi</a></li>';
@@ -264,6 +264,7 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
       <a href="/think-cell"><img alt="think-cell" src="assets/think-cell-logo_white.png" width="100px"></a>
       <a href="https://www.relexsolutions.com/"><img alt="Relex" src="assets/relex.png" width="100px"></a>
       <a href="https://skogul.fi/<?php echo in_array($lang, ['fi', 'sv']) ? $lang : ''; ?>"><img alt="Skøgul" src="assets/skogul-logo.svg" width="100px"></a>
+      <br />
       <a href="xqrr.fi">
         Teknologförenings utlandsexkursion 2018 stöds av:
       </a>
