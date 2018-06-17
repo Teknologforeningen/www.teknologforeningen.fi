@@ -270,15 +270,15 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
       </a>
       <!-- Huvudsponsorerna -->
       <div>
-        <img alt="Fluido" src="assets/xqrr/fluido.png" width="200px">
-        <img alt="Solwers" src="assets/xqrr/solwers.png" width="200px">
+        <a href="https://www.fluidogroup.com/"><img alt="Fluido" src="assets/xqrr/fluido.png" width="200px"></a>
+        <a href="https://solwers.fi/"><img alt="Solwers" src="assets/xqrr/solwers.png" width="200px"></a>
       </div>
       <!-- Övriga XQRR-sponsorer -->
       <div>
-        <img alt="Epiroc" src="assets/xqrr/epiroc.png" width="100px">
-        <img alt="Spraytech" src="assets/xqrr/spraytech.png" width="100px">
-        <img alt="Uudenmaan Pohjatutkimus" src="assets/xqrr/UPT.jpg" width="100px">
-        <img alt="Wapice" src="assets/xqrr/wapice.png" width="100px">
+        <a href="https://www.epiroc.com/"><img alt="Epiroc" src="assets/xqrr/epiroc.png" width="100px"></a>
+        <a href="http://spraytec.fi/"><img alt="Spraytech" src="assets/xqrr/spraytech.png" width="100px"></a>
+        <a href="http://uudenmaanpohjatutkimus.fi/"><img alt="Uudenmaan Pohjatutkimus" src="assets/xqrr/UPT.jpg" width="100px"></a>
+        <a href="https://www.wapice.com/"><img alt="Wapice" src="assets/xqrr/wapice.png" width="100px"></a>
       </div>
     </footer>
   </div>
