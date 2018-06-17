@@ -245,7 +245,7 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
           //Language specific language links
           if ($lang == "sv") {
             echo '<li><a href="?lang=fi">Suomeksi</a></li>';
-            echo '<li><a href="?lang=en">In English</a></li>';
+            echo "string"; '<li><a href="?lang=en">In English</a></li>';
           } else if ($lang == "en") {
             echo '<li><a href="?lang=sv">På svenska</a></li>';
             echo '<li><a href="?lang=fi">Suomeksi</a></li>';
@@ -269,15 +269,15 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
       </a>
       <!-- Huvudsponsorerna -->
       <div>
-        <img alt="Fluido" src="assets/xqrr/fluido.png">
-        <img alt="Solwers" src="assets/xqrr/solwers.png">
+        <img alt="Fluido" src="assets/xqrr/fluido.png" width="200px">
+        <img alt="Solwers" src="assets/xqrr/solwers.png" width="200px">
       </div>
       <!-- Övriga XQRR-sponsorer -->
       <div>
-        <img alt="Epiroc" src="assets/xqrr/epiroc.png">
-        <img alt="Spraytech" src="assets/xqrr/spraytech.png">
-        <img alt="Uudenmaan Pohjatutkimus" src="assets/xqrr/UPT.jpg">
-        <img alt="Wapice" src="assets/xqrr/wapice.png">
+        <img alt="Epiroc" src="assets/xqrr/epiroc.png" width="100px">
+        <img alt="Spraytech" src="assets/xqrr/spraytech.png" width="100px">
+        <img alt="Uudenmaan Pohjatutkimus" src="assets/xqrr/UPT.jpg" width="100px">
+        <img alt="Wapice" src="assets/xqrr/wapice.png" width="100px">
       </div>
     </footer>
   </div>
