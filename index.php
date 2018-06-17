@@ -264,6 +264,21 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
       <a href="/think-cell"><img alt="think-cell" src="assets/think-cell-logo_white.png" width="100px"></a>
       <a href="https://www.relexsolutions.com/"><img alt="Relex" src="assets/relex.png" width="100px"></a>
       <a href="https://skogul.fi/<?php echo in_array($lang, ['fi', 'sv']) ? $lang : ''; ?>"><img alt="Skøgul" src="assets/skogul-logo.svg" width="100px"></a>
+      <a href="xqrr.fi">
+        Teknologförenings utlandsexkursion 2018 stöds av:
+      </a>
+      <!-- Huvudsponsorerna -->
+      <div>
+        <img alt="Fluido" src="assets/xqrr/fluido.png">
+        <img alt="Solwers" src="assets/xqrr/solwers.png">
+      </div>
+      <!-- Övriga XQRR-sponsorer -->
+      <div>
+        <img alt="Epiroc" src="assets/xqrr/epiroc.png">
+        <img alt="Spraytech" src="assets/xqrr/spraytech.png">
+        <img alt="Uudenmaan Pohjatutkimus" src="assets/xqrr/UPT.jpg">
+        <img alt="Wapice" src="assets/xqrr/wapice.png">
+      </div>
     </footer>
   </div>
 
