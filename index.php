@@ -277,7 +277,7 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
       <div>
         <a href="https://www.epiroc.com/"><img alt="Epiroc" src="assets/xqrr/epiroc.png" width="100px"></a>
         <a href="http://spraytec.fi/"><img alt="Spraytech" src="assets/xqrr/spraytech.png" width="100px"></a>
-        <a href="http://uudenmaanpohjatutkimus.fi/"><img alt="Uudenmaan Pohjatutkimus" src="assets/xqrr/UPT.jpg" width="100px"></a>
+        <a href="http://uudenmaanpohjatutkimus.fi/"><img alt="Uudenmaan Pohjatutkimus" src="assets/xqrr/UPT.png" width="100px"></a>
         <a href="https://www.wapice.com/"><img alt="Wapice" src="assets/xqrr/wapice.png" width="100px"></a>
       </div>
     </footer>
