@@ -3,7 +3,7 @@
 define('SEASON_WINTER', 0);
 define('SEASON_SUMMER', 1);
 
-define('CUR_SEASON', SEASON_SUMMER);
+define('CUR_SEASON', SEASON_WINTER);
 
 // Mon-Thu
 define('TAFAPI_MON_THU_OPEN_H', 10);
