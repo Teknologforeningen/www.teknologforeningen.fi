@@ -258,12 +258,10 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
       <p>
         Teknologföreningens nationsföretag
       </p>
-      <a href="http://www.aktia.fi/sv/"><img alt="Aktia" src="assets/aktia.png" width="100px"></a>
       <a href="http://www.walki.com/"><img alt="Walki" src="assets/walki.png" width="100px"></a>
       <a href="https://tech.dreambroker.jobs/"><img alt="Dreambroker" src="assets/dreambroker.png" width="100px"></a>
       <a href="/think-cell"><img alt="think-cell" src="assets/think-cell-logo_white.png" width="100px"></a>
       <a href="https://www.relexsolutions.com/"><img alt="Relex" src="assets/relex.png" width="100px"></a>
-      <a href="https://skogul.fi/<?php echo in_array($lang, ['fi', 'sv']) ? $lang : ''; ?>"><img alt="Skøgul" src="assets/skogul-logo.svg" width="100px"></a>
       <br />
       <a href="xqrr.fi">
         Teknologförenings utlandsexkursion 2018 stöds av:
