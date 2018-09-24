@@ -262,6 +262,8 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
       <a href="https://tech.dreambroker.jobs/"><img alt="Dreambroker" src="assets/dreambroker.png" width="100px"></a>
       <a href="/think-cell"><img alt="think-cell" src="assets/think-cell-logo_white.png" width="100px"></a>
       <a href="https://www.relexsolutions.com/"><img alt="Relex" src="assets/relex.png" width="100px"></a>
+      <a href="https://www.visma.fi/"><img alt="Visma" src="assets/visma.png" width="100px"></a>
+      <a href="https://www.accenture.com/"><img alt="Accenture" src="assets/accenture.png" width="100px"></a>
       <br />
       <a href="xqrr.fi">
         Teknologförenings utlandsexkursion 2018 stöds av:
