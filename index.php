@@ -264,6 +264,7 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
       <a href="https://www.relexsolutions.com/"><img alt="Relex" src="assets/relex.png" width="100px"></a>
       <a href="https://www.visma.fi/"><img alt="Visma" src="assets/visma.png" width="100px"></a>
       <a href="https://www.accenture.com/"><img alt="Accenture" src="assets/accenture.png" width="100px"></a>
+      <a href="https://www.trimble.com/"><img alt="Trimble" src="assets/trimble.png" width="100px"></a>
       <a href="https://www.futurice.com/"><img alt="Futurice" src="assets/futurice.png" width="100px"></a>
       <br />
       <a href="xqrr.fi">
