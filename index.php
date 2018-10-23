@@ -266,24 +266,6 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
       <a href="https://www.accenture.com/"><img alt="Accenture" src="assets/accenture.png" width="100px"></a>
       <a href="https://www.trimble.com/"><img alt="Trimble" src="assets/trimble.png" width="100px"></a>
       <a href="https://www.futurice.com/"><img alt="Futurice" src="assets/futurice.png" width="100px"></a>
-      <br />
-      <a href="xqrr.fi">
-        Teknologförenings utlandsexkursion 2018 stöds av:
-      </a>
-      <!-- Huvudsponsorerna -->
-      <div>
-        <a href="https://www.fluidogroup.com/"><img alt="Fluido" src="assets/xqrr/fluido.png" width="200px"></a>
-        <a href="https://solwers.fi/"><img alt="Solwers" src="assets/xqrr/solwers.png" width="200px"></a>
-      </div>
-      <!-- Övriga XQRR-sponsorer -->
-      <div>
-        <a href="https://www.epiroc.com/"><img alt="Epiroc" src="assets/xqrr/epiroc.png" width="100px"></a>
-        <a href="http://spraytec.fi/"><img alt="Spraytech" src="assets/xqrr/spraytech.png" width="100px"></a>
-        <a href="http://uudenmaanpohjatutkimus.fi/"><img alt="Uudenmaan Pohjatutkimus" src="assets/xqrr/UPT.png" width="200px"></a>
-        <a href="https://www.wapice.com/"><img alt="Wapice" src="assets/xqrr/wapice.png" width="100px"></a>
-	<a href="https://www.ramboll.fi/"><img alt="Ramboll" src="assets/xqrr/ramboll.png" width="100px"></a>
-	<a href="https://www.simplibo.com"><img alt="Simplibo" src="assets/xqrr/simplibo.png" width="100px"></a>
-      </div>
     </footer>
   </div>
 
