@@ -23,7 +23,8 @@ $translations = array(
     "mon-thu" => "Mån - Tors",
     "fri" => "Fre",
     "skogul" => "Sk&oslash;gul",
-    "skogul_desc" => "Kvarterskrog"
+    "skogul_desc" => "Kvarterskrog",
+    "for_companies" => "För företag"
   ),
   "en" => array(
     "about" => "About Teknologföreningen",
@@ -39,7 +40,8 @@ $translations = array(
     "mon-thu" => "Mon - Thu",
     "fri" => "Fri",
     "skogul" => "Sk&oslash;gul",
-    "skogul_desc" => "Restaurant"
+    "skogul_desc" => "Restaurant",
+    "for_companies" => "For companies"
   ),
   "fi" => array(
     "about" => "Teknologföreningenistä",
@@ -55,7 +57,8 @@ $translations = array(
     "mon-thu" => "Ma - To",
     "fri" => "Pe",
     "skogul" => "Sk&oslash;gul",
-    "skogul_desc" => "Kortteliravintola"
+    "skogul_desc" => "Kortteliravintola",
+    "for_companies" => "Yrityksille"
   )
 );
 
@@ -113,18 +116,47 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
     <section class="top-bar-section">
       <ul class="left">
         <?php if ($lang == "sv") { //All links in Swedish, only About and Cooperation in English and Finnish ?>
-          <li class="mobile-internal-links"><a href="https://about.teknologforeningen.fi/index.php/sv/"><?php echo $translations[$lang]["about"]?></a></li>
-          <li class="mobile-internal-links"><a href="https://medlem.teknologforeningen.fi/index.php/sv/"><?php echo $translations[$lang]["member"]?></a></li>
-          <li class="mobile-internal-links"><a href="https://abi.teknologforeningen.fi/index.php/sv/"><?php echo $translations[$lang]["abi"]?></a></li>
-          <li class="mobile-internal-links"><a href="https://stalm.teknologforeningen.fi/index.php/sv/"><?php echo $translations[$lang]["alumni"]?></a></li>
+          <li class="mobile-internal-links">
+            <a href="https://about.teknologforeningen.fi/index.php/sv/">
+                <?php echo $translations[$lang]["about"]?>
+            </a>
+          </li>
+          <li class="mobile-internal-links">
+            <a href="https://medlem.teknologforeningen.fi/index.php/sv/">
+              <?php echo $translations[$lang]["member"]?>
+            </a>
+          </li>
+          <li class="mobile-internal-links">
+            <a href="https://abi.teknologforeningen.fi/index.php/sv/">
+              <?php echo $translations[$lang]["abi"]?>
+            </a>
+          </li>
+          <li class="mobile-internal-links">
+            <a href="https://stalm.teknologforeningen.fi/index.php/sv/">
+              <?php echo $translations[$lang]["alumni"]?>
+            </a>
+          </li>
           <!-- <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["coop"]?></a></li> -->
         <?php } else if ($lang == "en"){ ?>
-          <li class="mobile-internal-links"><a href="https://about.teknologforeningen.fi/index.php/en/"><?php echo $translations[$lang]["about"]?></a></li>
+          <li class="mobile-internal-links">
+            <a href="https://about.teknologforeningen.fi/index.php/en/">
+              <?php echo $translations[$lang]["about"]?>
+            </a>
+          </li>
           <!-- <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["coop"]?></a></li> -->
         <?php } else { ?>
-          <li class="mobile-internal-links"><a href="https://about.teknologforeningen.fi/index.php/fi/"><?php echo $translations[$lang]["about"]?></a></li>
+          <li class="mobile-internal-links">
+            <a href="https://about.teknologforeningen.fi/index.php/fi/">
+              <?php echo $translations[$lang]["about"]?>
+            </a>
+          </li>
           <!-- <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["coop"]?></a></li> -->
         <?php } ?>
+        <li class="mobile-internal-links">
+          <a href="/companies.php">
+            <?php echo $translations[$lang]["for_companies"]?>
+          </a>
+        </li>
         <li class="mobile-external-links first">
           <a href="http://taffa.fi/">
             <img src="assets/tf_natside_logon-06.svg">
@@ -166,18 +198,47 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
         <ul class="page-links-desktop">
 
           <?php if ($lang == "sv") { //All links in Swedish, only About and Cooperation in English and Finnish ?>
-            <li><a href="https://about.teknologforeningen.fi/index.php/sv/"><?php echo $translations[$lang]["about"]?></a></li>
-            <li><a href="https://medlem.teknologforeningen.fi/index.php/sv/"><?php echo $translations[$lang]["member"]?></a></li>
-            <li><a href="https://abi.teknologforeningen.fi/index.php/sv/"><?php echo $translations[$lang]["abi"]?></a></li>
-            <li><a href="https://stalm.teknologforeningen.fi/index.php/sv/"><?php echo $translations[$lang]["alumni"]?></a></li>
+            <li>
+              <a href="https://about.teknologforeningen.fi/index.php/sv/">
+                <?php echo $translations[$lang]["about"]?>
+              </a>
+            </li>
+            <li>
+              <a href="https://medlem.teknologforeningen.fi/index.php/sv/">
+                <?php echo $translations[$lang]["member"]?>
+              </a>
+            </li>
+            <li>
+              <a href="https://abi.teknologforeningen.fi/index.php/sv/">
+                <?php echo $translations[$lang]["abi"]?>
+              </a>
+            </li>
+            <li>
+              <a href="https://stalm.teknologforeningen.fi/index.php/sv/">
+                <?php echo $translations[$lang]["alumni"]?>
+              </a>
+            </li>
             <!-- <li><a href="#"><?php echo $translations[$lang]["coop"]?></a></li> -->
           <?php } else if ($lang == "en"){ ?>
-            <li class="wider-links"><a href="https://about.teknologforeningen.fi/index.php/en/"><?php echo $translations[$lang]["about"]?></a></li>
+            <li class="wider-links">
+              <a href="https://about.teknologforeningen.fi/index.php/en/">
+                <?php echo $translations[$lang]["about"]?>
+              </a>
+            </li>
             <!-- <li class="wider-links"><a href="#"><?php echo $translations[$lang]["coop"]?></a></li> -->
           <?php } else { ?>
-            <li class="wider-links"><a href="https://about.teknologforeningen.fi/index.php/fi/"><?php echo $translations[$lang]["about"]?></a></li>
+            <li class="wider-links">
+              <a href="https://about.teknologforeningen.fi/index.php/fi/">
+                <?php echo $translations[$lang]["about"]?>
+              </a>
+            </li>
             <!-- <li class="wider-links"><a href="#"><?php echo $translations[$lang]["coop"]?></a></li> -->
           <?php } ?>
+            <li>
+              <a href="/companies.php">
+                <?php echo $translations[$lang]["for_companies"]?>
+              </a>
+            </li>
         </ul>
       </div>
     </div>
