@@ -22,6 +22,14 @@ To run this in production you need to set up a webserver like Apache. Once that 
 
 [Install Docker](https://docs.docker.com/)
 
+Oneliner to be run in the same directory as index.php resides:
+```
+docker run -t -i -p 8000:80 -v `pwd`:/var/www "eriksencosta/php-dev:latest" webserver --foreground start
+```
+To shut it down, press ctl+c
+
+ALTERNATIVELY
+
 The following command will start a Docker container listening on port 8000. Make sure to replace the path with the path to the project.
 
 ```
