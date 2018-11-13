@@ -25,7 +25,8 @@ $urlObj = [
 
 $location = $urlObj['scheme'].'://'.$urlObj['host'].$urlObj['path'].'?'.$urlObj['query'];
 
-header('HTTP/1.1 301 Moved Permanently');
+# 301 = moved permanently, so browsers will cache this redirect
+http_response_code(301);
 header('Location: '.$location);
 
 exit();
