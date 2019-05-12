@@ -153,7 +153,7 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
           <!-- <li class="mobile-internal-links"><a href="#"><?php echo $translations[$lang]["coop"]?></a></li> -->
         <?php } ?>
         <li class="mobile-internal-links">
-          <a href="/companies.php">
+          <a href=<?php echo "/companies.php/?lang=".$lang ?>>
             <?php echo $translations[$lang]["for_companies"]?>
           </a>
         </li>
@@ -235,7 +235,7 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
             <!-- <li class="wider-links"><a href="#"><?php echo $translations[$lang]["coop"]?></a></li> -->
           <?php } ?>
             <li>
-              <a href="/companies.php">
+              <a href=<?php echo "/companies.php/?lang=".$lang ?>>
                 <?php echo $translations[$lang]["for_companies"]?>
               </a>
             </li>
@@ -325,6 +325,7 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
       <a href="https://www.accenture.com/"><img alt="Accenture" src="assets/accenture.png" width="100px"></a>
       <a href="https://www.trimble.com/"><img alt="Trimble" src="assets/trimble.png" width="100px"></a>
       <a href="https://www.futurice.com/"><img alt="Futurice" src="assets/futurice.png" width="100px"></a>
+      <a href="https://www.relexsolutions.com/"><img alt="Relex" src="assets/relex.png" width="100px"></a>
     </footer>
   </div>
 
