@@ -3,7 +3,6 @@
 define('SEASON_WINTER', 0);
 define('SEASON_SUMMER', 1);
 
-#define('CUR_SEASON', SEASON_WINTER);
 define('CUR_SEASON', SEASON_SUMMER);
 
 // Mon-Thu
