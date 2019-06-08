@@ -22,6 +22,7 @@ $translations = array(
     "taffa_url" => "https://about.teknologforeningen.fi/index.php/sv/dagsrestaurangen",
     "mon-thu" => "Mån - Tors",
     "fri" => "Fre",
+    "mon-fri" => "Mån - Fre",
     "skogul" => "Sk&oslash;gul",
     "skogul_desc" => "Kvarterskrog",
     "for_companies" => "För företag"
@@ -39,6 +40,7 @@ $translations = array(
     "taffa_url" => "https://about.teknologforeningen.fi/index.php/en/lunch-restaurant",
     "mon-thu" => "Mon - Thu",
     "fri" => "Fri",
+    "mon-fri" => "Mon - Fri",
     "skogul" => "Sk&oslash;gul",
     "skogul_desc" => "Restaurant",
     "for_companies" => "For companies"
@@ -56,6 +58,7 @@ $translations = array(
     "taffa_url" => "https://about.teknologforeningen.fi/index.php/fi/teekkariravintola",
     "mon-thu" => "Ma - To",
     "fri" => "Pe",
+    "mon-fri" => "Ma - Pe",
     "skogul" => "Sk&oslash;gul",
     "skogul_desc" => "Kortteliravintola",
     "for_companies" => "Yrityksille"
@@ -276,24 +279,26 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
         <div class="todays-menu">
           <?php echo $TaffaAPI->getNextMenu();?>
           <div id="week" class="hidden">
-            <?php echo $TaffaAPI->getNextMenu(1);?>
-            <?php echo $TaffaAPI->getNextMenu(2);?>
-            <?php echo $TaffaAPI->getNextMenu(3);?>
-            <?php echo $TaffaAPI->getNextMenu(4);?>
+            <?php for ($i = 1; $i <= 4; $i++) {
+              echo $TaffaAPI->getNextMenu($i);
+            } ?>
           </div>
           <div id="hours">
             <table>
               <tr>
-                <td><?php echo $translations[$lang]["mon-thu"]?></td>
-                <!--<td>10:30 - 16:00</td>-->
-                <td><?php echo str_pad(TAFAPI_MON_THU_OPEN_H, 2, '0', STR_PAD_LEFT).':'.str_pad(TAFAPI_MON_THU_OPEN_MIN, 2, '0', STR_PAD_LEFT)
-                        . ' - ' .str_pad(TAFAPI_MON_THU_CLOSE_H, 2, '0', STR_PAD_LEFT).':'.str_pad(TAFAPI_MON_THU_CLOSE_MIN, 2, '0', STR_PAD_LEFT); ?></td>
-              </tr>
-              <tr>
-                <td><?php echo $translations[$lang]["fri"]?></td>
-                <!--<td>10:30 - 15:00</td>-->
-                <td><?php echo str_pad(TAFAPI_FRI_OPEN_H, 2, '0', STR_PAD_LEFT) .':'.str_pad(TAFAPI_FRI_OPEN_MIN, 2, '0', STR_PAD_LEFT). ' - '
-                        .str_pad(TAFAPI_FRI_CLOSE_H, 2, '0', STR_PAD_LEFT).':'.str_pad(TAFAPI_FRI_CLOSE_MIN, 2, '0', STR_PAD_LEFT); ?></td>
+                <?php if (TAFAPI_MON_THU_OPEN_H == TAFAPI_FRI_OPEN_H && TAFAPI_MON_THU_CLOSE_H == TAFAPI_FRI_CLOSE_H) {
+                    echo '<td>' . $translations[$lang]["mon-fri"] . '</td>';
+                    echo '<td>' . str_pad(TAFAPI_MON_THU_OPEN_H, 2, '0', STR_PAD_LEFT).':'.str_pad(TAFAPI_MON_THU_OPEN_MIN, 2, '0', STR_PAD_LEFT)
+                         . ' - ' .str_pad(TAFAPI_MON_THU_CLOSE_H, 2, '0', STR_PAD_LEFT).':'.str_pad(TAFAPI_MON_THU_CLOSE_MIN, 2, '0', STR_PAD_LEFT) . '</td>';
+                  } else {
+                    echo '<td>' . $translations[$lang]["mon-thu"] . '</td>';
+                    echo '<td>' . str_pad(TAFAPI_MON_THU_OPEN_H, 2, '0', STR_PAD_LEFT).':'.str_pad(TAFAPI_MON_THU_OPEN_MIN, 2, '0', STR_PAD_LEFT)
+                         . ' - ' .str_pad(TAFAPI_MON_THU_CLOSE_H, 2, '0', STR_PAD_LEFT).':'.str_pad(TAFAPI_MON_THU_CLOSE_MIN, 2, '0', STR_PAD_LEFT) . '</td>';
+                    echo '</tr><tr>';
+                    echo '<td>' . $translations[$lang]["fri"] . '</td>';
+                    echo '<td>' . str_pad(TAFAPI_FRI_OPEN_H, 2, '0', STR_PAD_LEFT) .':'.str_pad(TAFAPI_FRI_OPEN_MIN, 2, '0', STR_PAD_LEFT). ' - '
+                         . str_pad(TAFAPI_FRI_CLOSE_H, 2, '0', STR_PAD_LEFT).':'.str_pad(TAFAPI_FRI_CLOSE_MIN, 2, '0', STR_PAD_LEFT) . '</td>';
+                } ?>
               </tr>
             </table>
           </div>
