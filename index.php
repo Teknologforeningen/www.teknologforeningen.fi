@@ -331,6 +331,7 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
       <a href="https://www.trimble.com/"><img alt="Trimble" src="assets/trimble.png" width="100px"></a>
       <a href="https://www.futurice.com/"><img alt="Futurice" src="assets/futurice.png" width="100px"></a>
       <a href="https://www.relexsolutions.com/"><img alt="Relex" src="assets/relex.png" width="100px"></a>
+      <a href="https://www.academicwork.fi/"><img alt="Academic work" src="assets/academicwork.png" width="100px"></a>
     </footer>
   </div>
 
