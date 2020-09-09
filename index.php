@@ -325,13 +325,11 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
       <p>
         Teknologföreningens nationsföretag
       </p>
-      <a href="http://www.walki.com/"><img alt="Walki" src="assets/walki.png" width="100px"></a>
       <a href="/think-cell"><img alt="think-cell" src="assets/think-cell-logo_white.png" width="100px"></a>
       <a href="https://www.visma.fi/"><img alt="Visma" src="assets/visma.png" width="100px"></a>
       <a href="https://www.accenture.com/"><img alt="Accenture" src="assets/accenture.png" width="100px"></a>
       <a href="https://www.trimble.com/"><img alt="Trimble" src="assets/trimble.png" width="100px"></a>
       <a href="https://www.futurice.com/"><img alt="Futurice" src="assets/futurice.png" width="100px"></a>
-      <a href="https://www.relexsolutions.com/"><img alt="Relex" src="assets/relex.png" width="100px"></a>
       <a href="https://www.academicwork.fi/"><img alt="Academic work" src="assets/academicwork.png" width="100px"></a>
     </footer>
   </div>
