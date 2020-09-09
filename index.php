@@ -261,15 +261,6 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
           </div>
         </a>
       </div>
-      <!--div class="small-12 large-4 columns">
-        <a href="https://skogul.fi/<?php echo in_array($lang, ['fi', 'sv']) ? $lang : ''; ?>">
-          <img src="assets/skogul-icon-white.svg" style="height: 64px">
-          <div class="link-container">
-            <h3><?php echo $translations[$lang]["skogul"]?></h3><br>
-            <span><?php echo $translations[$lang]["skogul_desc"]?></span>
-          </div>
-        </a>
-      </div-->
       <div class="small-12 large-6 end columns">
         <a href="<?php echo $translations[$lang]["taffa_url"]?>">
           <img src="assets/tf_natside_logon-01.svg" style="height: 64px">
