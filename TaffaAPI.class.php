@@ -115,8 +115,13 @@ class taffaAPI
             );
         if (
                 ((int)date('G') < TAFAPI_MON_THU_OPEN_H || (int)date('G') === TAFAPI_MON_THU_OPEN_H && (int)date('i') < TAFAPI_MON-THU_OPEN_MIN) // Pre 1030
+                // Sorry, orka inte göra ordentligt... Denhär sidan e kakka // Cookie 04/11/2019
+                /*
                 || (int)date('G') >= TAFAPI_MON_THU_CLOSE_H && (int)date('N') < 5 // Post 16 on mon-thu
                 || (int)date('G') >= TAFAPI_FRI_CLOSE_H && (int)date('N') == 5 // Post 15 on fri
+                */
+                || (int)date('G') >= 15 && (int)date('N') != 5 // Post 15:00 on everything except Wed
+                || (int)date('G') >= 17 && ((int)date('G') == 17 ? (int)date('i') >= 30 : true) && (int)date('N') == 5 // Post 17:30 on Wed
                 || (int)date('N') >  5 // sat-sun
             )
         {
@@ -133,8 +138,13 @@ class taffaAPI
     public function getNextMenu($days=0)
     {
         if(
+            // Sorry, orka inte göra ordentligt... Denhär sidan e kakka // Cookie 04/11/2019
+            /*
             (int)date('G') >= TAFAPI_MON_THU_CLOSE_H && (int)date('N') < 5 // Post 16 on mon-thu
             || (int)date('G') >= TAFAPI_FRI_CLOSE_H && (int)date('N') == 5 // Post 15 on fri
+            */
+            (int)date('G') >= 15 && (int)date('N') != 5 // Post 15:00 on everything except Wed
+            || (int)date('G') >= 17 && ((int)date('G') == 17 ? (int)date('i') >= 30 : true) && (int)date('N') == 5 // Post 17:30 on Wed
         ) {
             $days=$days + 1;
         }
