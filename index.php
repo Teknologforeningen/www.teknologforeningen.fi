@@ -26,9 +26,8 @@ $translations = array(
     "skogul" => "Sk&oslash;gul",
     "skogul_desc" => "Kvarterskrog",
     "for_companies" => "För företag",
-    "week" => "Mån - Fre"
-    //"week" => "Mån - Tis, Tor - Fre",
-    //"wed" => "Ons"
+    "week" => "Mån - Tis, Tor - Fre",
+    "wed" => "Ons"
   ),
   "en" => array(
     "about" => "About Teknologföreningen",
@@ -47,9 +46,8 @@ $translations = array(
     "skogul" => "Sk&oslash;gul",
     "skogul_desc" => "Restaurant",
     "for_companies" => "For companies",
-    "week" => "Mon - Fri",
-    //"week" => "Mon - Tue, Thu - Fri",
-    //"wed" => "Wed"
+    "week" => "Mon - Tue, Thu - Fri",
+    "wed" => "Wed"
   ),
   "fi" => array(
     "about" => "Teknologföreningenistä",
@@ -68,9 +66,8 @@ $translations = array(
     "skogul" => "Sk&oslash;gul",
     "skogul_desc" => "Kortteliravintola",
     "for_companies" => "Yrityksille",
-    "week" => "Ma - Pe",
-    //"week" => "Ma - Ti, To - Pe",
-    //"wed" => "Ke"
+    "week" => "Ma - Ti, To - Pe",
+    "wed" => "Ke"
   )
 );
 
@@ -255,7 +252,7 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
       </div>
     </div>
     <div class="row external-links">
-      <div class="small-12 large-4 columns">
+      <div class="small-12 large-6 columns">
         <a href="http://taffa.fi/">
           <img src="assets/tf_natside_logon-02.svg" style="height: 64px">
           <div class="link-container">
@@ -264,7 +261,7 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
           </div>
         </a>
       </div>
-      <div class="small-12 large-4 columns">
+      <!--div class="small-12 large-4 columns">
         <a href="https://skogul.fi/<?php echo in_array($lang, ['fi', 'sv']) ? $lang : ''; ?>">
           <img src="assets/skogul-icon-white.svg" style="height: 64px">
           <div class="link-container">
@@ -272,8 +269,8 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
             <span><?php echo $translations[$lang]["skogul_desc"]?></span>
           </div>
         </a>
-      </div>
-      <div class="small-12 large-4 end columns">
+      </div-->
+      <div class="small-12 large-6 end columns">
         <a href="<?php echo $translations[$lang]["taffa_url"]?>">
           <img src="assets/tf_natside_logon-01.svg" style="height: 64px">
           <div class="link-container">
@@ -310,9 +307,9 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
                 } ?-->
                 <?php echo '<td>' . $translations[$lang]["week"] . '</td>' . '<td>' . '10:30 - 15:00' . '</td>'; ?>
               </tr>
-              <!--tr>
+              <tr>
                 <?php echo '<td>' . $translations[$lang]["wed"] . '</td>' . '<td>' . '10:30 - 17:30' . '</td>'; ?>
-              </tr-->
+              </tr>
             </table>
           </div>
         </div>
