@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# run cronjob to update menus
 crond -l 2 -f &
 status=$?
 if [ $status -ne 0 ]; then
@@ -7,6 +8,7 @@ if [ $status -ne 0 ]; then
   exit $status
 fi
 
+# handle php requests
 php-fpm -F &
 status=$?
 if [ $status -ne 0 ]; then
@@ -14,12 +16,14 @@ if [ $status -ne 0 ]; then
   exit $status
 fi
 
+# generate menus on startup
 /opt/generate_menus.sh
 if [ $status -ne 0 ]; then
   echo "Script generate_menus.sh returned error: $status"
   exit $status
 fi
 
+# check that crond and php-fpm are running
 while sleep 60; do
   ps aux | grep crond | grep -v 'grep crond' -q
   PROCESS_1_STATUS=$?
@@ -30,7 +34,5 @@ while sleep 60; do
   if [ $PROCESS_1_STATUS -ne 0 -o $PROCESS_2_STATUS -ne 0 ]; then
     echo "One of the processes has already exited."
     exit 1
-  else
-	  echo "all ok!"
   fi
 done
