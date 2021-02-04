@@ -1,21 +1,26 @@
-FROM php:8.0.1-fpm-alpine3.13 AS landingpage
+# nginx
+FROM nginx:mainline-alpine AS landing-nginx
+ARG SRC=.
+ENV NGINX_ENVSUBST_TEMPLATE_SUFFIX: ".template"
+ENV STATIC=/usr/share/nginx/html/www.teknologforeningen.fi
+RUN mkdir -p $STATIC
+WORKDIR $STATIC
+COPY $SRC/static .
+COPY nginx.conf.template /etc/nginx/
+ENTRYPOINT ["/docker-entrypoint.sh"]
+EXPOSE 80
+STOPSIGNAL SIGQUIT
+CMD ["/bin/sh", "-c", "envsubst '${STATIC}'< /etc/nginx/nginx.conf.template > /etc/nginx/nginx.conf && exec nginx -g 'daemon off;'"]
 
-ARG STATIC=/usr/share/nginx/html/www.teknologforeningen.fi
-ARG GENERATE_MENUS=\
-	'cd '$STATIC';\
-	for l in sv fi en; do;\
-	MENU=""\
-	echo "$(date): Generating menu $l.php";\
-	MENU=$(php -f menu.php lang=$l);\
-	echo $MENU > menu_$l.php;\
-	done'
-
-COPY ["static/index.php", "static/companies.php", "static/menu.php", "static/TaffaAPI.class.php", "static/gen_menu.sh", "$STATIC/"]
-COPY ["menu_crontab", "/etc/crontabs/root"]
-
-RUN mkdir $STATIC
-RUN eval $GENERATE_MENUS
-
+# php-fpm
+FROM php:8.0.1-fpm-alpine3.13 AS landing-php-fpm
+ENV STATIC=/usr/share/nginx/html/www.teknologforeningen.fi
+ARG SRC=.
+COPY ["$SRC/menu_crontab", "/var/spool/cron/crontabs/root"]
+COPY ["$SRC/generate_menus.sh", "$SRC/entrypoint.sh", "/opt/"]
+WORKDIR /opt/
+RUN chmod +x ./generate_menus.sh ./entrypoint.sh
 STOPSIGNAL SIGQUIT
 EXPOSE 9000
-CMD ["/entrypoint.sh"]
+CMD ["./entrypoint.sh"]
+#CMD ["crond", "-f", "-l", "2"]

@@ -1,0 +1,28 @@
+user nginx;
+worker_processes auto;
+
+events {
+    worker_connections 1024;
+}
+
+http {
+    include /etc/nginx/mime.types;
+    default_type text/html;
+
+	server {
+		server_name lp.localhost;
+		root ${STATIC};
+
+		location / {
+			index index.php;
+		}
+
+		location ~ [^/]\.php(/|$) {
+			resolver 127.0.0.11 ipv6=off;
+			include /etc/nginx/fastcgi_params;
+			fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+			fastcgi_pass landing-php-fpm:9000;
+			try_files $uri /index.php$is_args$args;
+		}
+	}
+}

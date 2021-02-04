@@ -1,0 +1,33 @@
+version: '3.5'
+
+services:
+  landing-nginx:
+    build:
+      context: .
+      target: landing-nginx
+    hostname: landing-nginx
+    restart: on-failure
+    networks:
+      - landing_net
+    volumes:
+      - landing_vol:/usr/share/nginx/html/www.teknologforeningen.fi
+    ports:
+      - 80:80
+
+  landing-php-fpm:
+    build:
+      context: .
+      target: landing-php-fpm
+    hostname: landing-php-fpm
+    restart: on-failure
+    networks:
+      - landing_net
+    volumes:
+      - landing_vol:/usr/share/nginx/html/www.teknologforeningen.fi
+
+networks:
+  landing_net:
+    name: landing_net
+
+volumes:
+  landing_vol:
