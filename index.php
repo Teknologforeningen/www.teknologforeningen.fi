@@ -28,9 +28,7 @@ $translations = array(
     "for_companies" => "För företag",
     "week" => "Mån - Tis, Tor - Fre",
     "wed" => "Ons",
-    "takeaway" => "Endast takeaway.",
-    "closed" => "Restaurangen är stängd som en försiktighetsåtgärd. Vi öppnar igen måndag 29.3."
-    
+    "takeaway" => "Endast takeaway."
   ),
   "en" => array(
     "about" => "About Teknologföreningen",
@@ -51,8 +49,7 @@ $translations = array(
     "for_companies" => "For companies",
     "week" => "Mon - Tue, Thu - Fri",
     "wed" => "Wed",
-    "takeaway" => "Takeaway only.",
-    "closed" => "The restaurant is closed as a precaution. We will open again on Monday 29.3."
+    "takeaway" => "Takeaway only."
   ),
   "fi" => array(
     "about" => "Teknologföreningenistä",
@@ -73,8 +70,7 @@ $translations = array(
     "for_companies" => "Yrityksille",
     "week" => "Ma - Ti, To - Pe",
     "wed" => "Ke",
-    "takeaway" => "Ainoastaan takeaway.",
-    "closed" => "Ravintola on suljettuna varotoimenpiteenä. Avaamme jälleen maanantaina 29.3."
+    "takeaway" => "Ainoastaan takeaway."
   )
 );
 
@@ -280,9 +276,8 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
     </div>
     <div class="row menu">
       <div class="todays-menu-container small-12 small-centered large-centered column">
-        <!-- check git for what should be commented out-->
         <div class="todays-menu">
-          <!--<?php echo $TaffaAPI->getNextMenu();?>
+          <?php echo $TaffaAPI->getNextMenu();?>
           <div id="week" class="hidden">
             <?php for ($i = 1; $i <= 4; $i++) {
               echo $TaffaAPI->getNextMenu($i);
@@ -291,7 +286,7 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
           <div id="hours">
             <table>
               <tr>
-                ?php if (TAFAPI_MON_THU_OPEN_H == TAFAPI_FRI_OPEN_H && TAFAPI_MON_THU_CLOSE_H == TAFAPI_FRI_CLOSE_H) {
+                <!--?php if (TAFAPI_MON_THU_OPEN_H == TAFAPI_FRI_OPEN_H && TAFAPI_MON_THU_CLOSE_H == TAFAPI_FRI_CLOSE_H) {
                     echo '<td>' . $translations[$lang]["mon-fri"] . '</td>';
                     echo '<td>' . str_pad(TAFAPI_MON_THU_OPEN_H, 2, '0', STR_PAD_LEFT).':'.str_pad(TAFAPI_MON_THU_OPEN_MIN, 2, '0', STR_PAD_LEFT)
                          . ' - ' .str_pad(TAFAPI_MON_THU_CLOSE_H, 2, '0', STR_PAD_LEFT).':'.str_pad(TAFAPI_MON_THU_CLOSE_MIN, 2, '0', STR_PAD_LEFT) . '</td>';
@@ -303,7 +298,7 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
                     echo '<td>' . $translations[$lang]["fri"] . '</td>';
                     echo '<td>' . str_pad(TAFAPI_FRI_OPEN_H, 2, '0', STR_PAD_LEFT) .':'.str_pad(TAFAPI_FRI_OPEN_MIN, 2, '0', STR_PAD_LEFT). ' - '
                          . str_pad(TAFAPI_FRI_CLOSE_H, 2, '0', STR_PAD_LEFT).':'.str_pad(TAFAPI_FRI_CLOSE_MIN, 2, '0', STR_PAD_LEFT) . '</td>';
-                } ?
+                } ?-->
                 <?php echo '<td>' . $translations[$lang]["week"] . '</td>' . '<td>' . '10:30 - 15:00' . '</td>'; ?>
               </tr>
               <tr>
@@ -313,8 +308,7 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
                 <?php echo '<td>' . $translations[$lang]["takeaway"] ; ?>
               </tr>
             </table>
-          </div>-->
-          <?php echo '<td>' . $translations[$lang]["closed"] ; ?>
+          </div>
         </div>
       </div>
     </div>
