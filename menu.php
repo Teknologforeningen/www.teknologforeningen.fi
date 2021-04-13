@@ -26,7 +26,8 @@ $translations = array(
     "skogul_desc" => "Kvarterskrog",
     "for_companies" => "För företag",
     "week" => "Mån - Tis, Tor - Fre",
-    "wed" => "Ons"
+    "wed" => "Ons",
+    "takeaway" => "Endast takeaway."
   ),
   "en" => array(
     "about" => "About Teknologföreningen",
@@ -46,7 +47,8 @@ $translations = array(
     "skogul_desc" => "Restaurant",
     "for_companies" => "For companies",
     "week" => "Mon - Tue, Thu - Fri",
-    "wed" => "Wed"
+    "wed" => "Wed",
+    "takeaway" => "Takeaway only."
   ),
   "fi" => array(
     "about" => "Teknologföreningenistä",
@@ -66,7 +68,8 @@ $translations = array(
     "skogul_desc" => "Kortteliravintola",
     "for_companies" => "Yrityksille",
     "week" => "Ma - Ti, To - Pe",
-    "wed" => "Ke"
+    "wed" => "Ke",
+    "takeaway" => "Ainoastaan takeaway."
   )
 );
 
@@ -94,8 +97,11 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
         <?php echo '<td>' . $translations[$lang]["week"] . '</td>' . '<td>' . '10:30 - 15:00' . '</td>'; ?>
       </tr>
       <tr>
-        <?php echo '<td>' . $translations[$lang]["wed"] . '</td>' . '<td>' . '10:30 - 17:30' . '</td>'; ?>
+        <?php echo '<td>' . $translations[$lang]["wed"] . '</td>' . '<td>' . '10:30 - 15:00' . '</td>'; ?>
       </tr>
+      <tr>
+        <?php echo '<td>' . $translations[$lang]["takeaway"] ; ?>
+        </tr>
     </table>
   </div>
 </div>

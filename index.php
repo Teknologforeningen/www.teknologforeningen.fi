@@ -276,40 +276,15 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
     </div>
     <div class="row menu">
       <div class="todays-menu-container small-12 small-centered large-centered column">
-        <div class="todays-menu">
-          <?php echo $TaffaAPI->getNextMenu();?>
-          <div id="week" class="hidden">
-            <?php for ($i = 1; $i <= 4; $i++) {
-              echo $TaffaAPI->getNextMenu($i);
-            } ?>
-          </div>
-          <div id="hours">
-            <table>
-              <tr>
-                <!--?php if (TAFAPI_MON_THU_OPEN_H == TAFAPI_FRI_OPEN_H && TAFAPI_MON_THU_CLOSE_H == TAFAPI_FRI_CLOSE_H) {
-                    echo '<td>' . $translations[$lang]["mon-fri"] . '</td>';
-                    echo '<td>' . str_pad(TAFAPI_MON_THU_OPEN_H, 2, '0', STR_PAD_LEFT).':'.str_pad(TAFAPI_MON_THU_OPEN_MIN, 2, '0', STR_PAD_LEFT)
-                         . ' - ' .str_pad(TAFAPI_MON_THU_CLOSE_H, 2, '0', STR_PAD_LEFT).':'.str_pad(TAFAPI_MON_THU_CLOSE_MIN, 2, '0', STR_PAD_LEFT) . '</td>';
-                  } else {
-                    echo '<td>' . $translations[$lang]["mon-thu"] . '</td>';
-                    echo '<td>' . str_pad(TAFAPI_MON_THU_OPEN_H, 2, '0', STR_PAD_LEFT).':'.str_pad(TAFAPI_MON_THU_OPEN_MIN, 2, '0', STR_PAD_LEFT)
-                         . ' - ' .str_pad(TAFAPI_MON_THU_CLOSE_H, 2, '0', STR_PAD_LEFT).':'.str_pad(TAFAPI_MON_THU_CLOSE_MIN, 2, '0', STR_PAD_LEFT) . '</td>';
-                    echo '</tr><tr>';
-                    echo '<td>' . $translations[$lang]["fri"] . '</td>';
-                    echo '<td>' . str_pad(TAFAPI_FRI_OPEN_H, 2, '0', STR_PAD_LEFT) .':'.str_pad(TAFAPI_FRI_OPEN_MIN, 2, '0', STR_PAD_LEFT). ' - '
-                         . str_pad(TAFAPI_FRI_CLOSE_H, 2, '0', STR_PAD_LEFT).':'.str_pad(TAFAPI_FRI_CLOSE_MIN, 2, '0', STR_PAD_LEFT) . '</td>';
-                } ?-->
-                <?php echo '<td>' . $translations[$lang]["week"] . '</td>' . '<td>' . '10:30 - 15:00' . '</td>'; ?>
-              </tr>
-              <tr>
-                <?php echo '<td>' . $translations[$lang]["wed"] . '</td>' . '<td>' . '10:30 - 15:00' . '</td>'; ?>
-              </tr>
-              <tr>
-                <?php echo '<td>' . $translations[$lang]["takeaway"] ; ?>
-              </tr>
-            </table>
-          </div>
-        </div>
+        <?php
+          if ($lang == "sv") {
+            include('menu_sv.html');
+          } else if ($lang == "en") {
+            include('menu_en.html');
+          } else {
+            include('menu_fi.html');
+          }
+        ?>
       </div>
     </div>
     <footer class="footer">
