@@ -99,9 +99,9 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
       <tr>
         <?php echo '<td>' . $translations[$lang]["wed"] . '</td>' . '<td>' . '10:30 - 15:00' . '</td>'; ?>
       </tr>
-      <tr>
+      <!--tr>
         <?php echo '<td>' . $translations[$lang]["takeaway"] ; ?>
-        </tr>
+      </tr-->
     </table>
   </div>
 </div>
