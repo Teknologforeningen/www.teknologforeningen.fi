@@ -210,7 +210,7 @@ class taffaAPI
                 'sv' => '<small>Information ej tillgänglig!</small>',
                 'en' => '<small>Information unavailable</small>!'
             );
-        $urlToGet = $this->apiBaseURL . $this->curLang . "/" . $url;
+        $urlToGet = $this->apiBaseURL . $this->curLang . "/" . $url . "/";
         $httpResponseCode = $this->getHttpRequestCode($urlToGet);
         if(!in_array($httpResponseCode, Array(200, 301)))
         {
