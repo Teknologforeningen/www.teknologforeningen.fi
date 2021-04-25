@@ -94,11 +94,11 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
   <div id="hours">
     <table>
       <tr>
-        <?php echo '<td>' . $translations[$lang]["week"] . '</td>' . '<td>' . '10:30 - 15:00' . '</td>'; ?>
+        <?php echo '<td>' . $translations[$lang]["mon-fri"] . '</td>' . '<td>' . '10:30 - 15:00' . '</td>'; ?>
       </tr>
-      <tr>
+      <!--tr>
         <?php echo '<td>' . $translations[$lang]["wed"] . '</td>' . '<td>' . '10:30 - 15:00' . '</td>'; ?>
-      </tr>
+      </tr-->
       <!--tr>
         <?php echo '<td>' . $translations[$lang]["takeaway"] ; ?>
       </tr-->
