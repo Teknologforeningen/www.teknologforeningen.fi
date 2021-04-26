@@ -16,6 +16,19 @@ If this command fails it means someone has made changes on the server and you sh
 
 To run this in production you need to set up a webserver like Apache. Once that is set-up you should clone the repository into the `/var/www` folder. Make sure to set the ownership of the folder to `www-data` in order to allow the webserver user to access it.
 
+### Menu generation
+
+Due to the Täffä API being painfully slow menus are generated separately. The menus can be generated hourly by placing the following script in /etc/cron.hourly/
+```
+#!/bin/sh
+cd /var/www/www.teknologforeningen.fi
+for l in sv fi en
+do
+        MENU=$(php -f menu.php lang=$l)
+        echo $MENU > menu_$l.html
+done
+```
+
 ## Development setup
 
 ### Docker (recommended way)
