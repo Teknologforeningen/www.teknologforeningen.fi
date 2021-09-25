@@ -143,9 +143,7 @@ class taffaAPI
             (int)date('G') >= TAFAPI_MON_THU_CLOSE_H && (int)date('N') < 5 // Post 16 on mon-thu
             || (int)date('G') >= TAFAPI_FRI_CLOSE_H && (int)date('N') == 5 // Post 15 on fri
             */
-            ((int)date('G') >= 15 && (int)date('N') != 5 // Post 15:00 on everything except Wed
-            || (int)date('G') >= 17 && ((int)date('G') == 17 ? (int)date('i') >= 30 : true) && (int)date('N') == 5) // Post 17:30 on Wed
-            && !(int)date('N') > 5 // html/0 already returns mondays menu on weekends
+            ((int)date('G') >= 15 && (int)date('N') <= 5)
         ) {
             $days=$days + 1;
         }
