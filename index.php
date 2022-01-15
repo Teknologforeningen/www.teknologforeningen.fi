@@ -308,10 +308,10 @@ if ($lang != "sv" && $lang != "en" && $lang != "fi") {
       </p>
       <a href="/think-cell"><img alt="think-cell" src="assets/think-cell-logo_white.png" width="100px"></a>
       <a href="https://www.visma.fi/"><img alt="Visma" src="assets/visma.png" width="100px"></a>
-      <a href="https://www.accenture.com/"><img alt="Accenture" src="assets/accenture.png" width="100px"></a>
       <a href="https://www.trimble.com/"><img alt="Trimble" src="assets/trimble.png" width="100px"></a>
       <a href="https://www.futurice.com/"><img alt="Futurice" src="assets/futurice.png" width="100px"></a>
       <a href="https://www.academicwork.fi/"><img alt="Academic work" src="assets/academicwork.png" width="100px"></a>
+      <a href="https://www.ey.com/fi_fi"><img alt="EY" src="assets/ey.png" width="100px"></a>
     </footer>
   </div>
 
